@@ -2,37 +2,105 @@ using UnityEngine;
 
 public class ColorPlatform : MonoBehaviour
 {
-    // The ColorManager controlling the background
-    public ColorManager colorManager;
+    // =========================
+    // PLATFORM COLOR
+    // =========================
 
-    // The color assigned to THIS platform
     public ColorManager.GameColor platformColor =
         ColorManager.GameColor.Red;
 
 
-    // Store every collider and sprite renderer
-    // belonging to this platform
+    // =========================
+    // INTERNAL VARIABLES
+    // =========================
+
+    private ColorManager colorManager;
+
     private Collider2D[] platformColliders;
+
     private SpriteRenderer[] spriteRenderers;
 
 
+    // =========================
+    // START
+    // =========================
+
     void Start()
     {
-        // Find ALL colliders on this object
-        // and any children underneath it
-        platformColliders =
-            GetComponentsInChildren<Collider2D>(true);
+        FindColorManager();
 
-        // Find all sprite renderers too
-        spriteRenderers =
-            GetComponentsInChildren<SpriteRenderer>(true);
-
+        GetPlatformParts();
 
         ApplyPlatformColor();
+
+        UpdateCollision();
     }
 
 
+    // =========================
+    // WHEN SCRIPT IS ENABLED
+    // =========================
+
+    void OnEnable()
+    {
+        FindColorManager();
+
+        GetPlatformParts();
+
+        ApplyPlatformColor();
+
+        UpdateCollision();
+    }
+
+
+    // =========================
+    // UPDATE
+    // =========================
+
     void Update()
+    {
+        UpdateCollision();
+    }
+
+
+    // =========================
+    // FIND COLOR MANAGER
+    // =========================
+
+    void FindColorManager()
+    {
+        if (colorManager == null)
+        {
+            colorManager =
+                FindAnyObjectByType<ColorManager>();
+        }
+    }
+
+
+    // =========================
+    // GET PLATFORM PARTS
+    // =========================
+
+    void GetPlatformParts()
+    {
+        platformColliders =
+            GetComponentsInChildren<Collider2D>(
+                true
+            );
+
+
+        spriteRenderers =
+            GetComponentsInChildren<SpriteRenderer>(
+                true
+            );
+    }
+
+
+    // =========================
+    // APPLY VISUAL COLOR
+    // =========================
+
+    void ApplyPlatformColor()
     {
         if (colorManager == null)
         {
@@ -40,17 +108,49 @@ public class ColorPlatform : MonoBehaviour
         }
 
 
+        Color chosenColor =
+            colorManager.GetUnityColor(
+                platformColor
+            );
+
+
+        foreach (
+            SpriteRenderer sprite
+            in spriteRenderers
+        )
+        {
+            sprite.color =
+                chosenColor;
+        }
+    }
+
+
+    // =========================
+    // COLOR COLLISION
+    // =========================
+
+    void UpdateCollision()
+    {
+        if (
+            colorManager == null
+            ||
+            platformColliders == null
+        )
+        {
+            return;
+        }
+
+
         bool matchesBackground =
             colorManager.currentColor
-            == platformColor;
+            ==
+            platformColor;
 
 
-        // If background matches the platform:
-        // disable EVERY collider.
-        //
-        // Otherwise:
-        // turn them all back on.
-        foreach (Collider2D platformCollider in platformColliders)
+        foreach (
+            Collider2D platformCollider
+            in platformColliders
+        )
         {
             platformCollider.enabled =
                 !matchesBackground;
@@ -58,33 +158,47 @@ public class ColorPlatform : MonoBehaviour
     }
 
 
-    void ApplyPlatformColor()
+    // =========================
+    // EDITOR COLOR PREVIEW
+    // =========================
+
+    void OnValidate()
     {
-        Color chosenColor = Color.white;
-
-
-        if (platformColor ==
-            ColorManager.GameColor.Red)
+        if (Application.isPlaying)
         {
-            chosenColor = Color.red;
-        }
-
-        else if (platformColor ==
-                 ColorManager.GameColor.Yellow)
-        {
-            chosenColor = Color.yellow;
-        }
-
-        else if (platformColor ==
-                 ColorManager.GameColor.Blue)
-        {
-            chosenColor = Color.blue;
+            return;
         }
 
 
-        foreach (SpriteRenderer sprite in spriteRenderers)
+        ColorManager manager =
+            FindAnyObjectByType<ColorManager>();
+
+
+        if (manager == null)
         {
-            sprite.color = chosenColor;
+            return;
+        }
+
+
+        SpriteRenderer[] sprites =
+            GetComponentsInChildren<SpriteRenderer>(
+                true
+            );
+
+
+        Color chosenColor =
+            manager.GetUnityColor(
+                platformColor
+            );
+
+
+        foreach (
+            SpriteRenderer sprite
+            in sprites
+        )
+        {
+            sprite.color =
+                chosenColor;
         }
     }
 }

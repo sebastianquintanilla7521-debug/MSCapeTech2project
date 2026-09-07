@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     // =========================
 
     public float moveSpeed = 10f;
-    public float airMoveSpeed = 7.5f;
+    public float airMoveSpeed = 8f;
 
 
     // =========================
@@ -16,8 +16,6 @@ public class PlayerMovement : MonoBehaviour
     // =========================
 
     public float jumpForce = 15f;
-
-    // 2 = normal jump + double jump
     public int maxJumps = 2;
 
 
@@ -34,40 +32,65 @@ public class PlayerMovement : MonoBehaviour
     // DASH SETTINGS
     // =========================
 
+    // Ground horizontal dash
     public float groundDashSpeed = 19f;
 
-    public float airHorizontalDashSpeed = 3f;
+    // How long the ground dash accelerates/eases
+    public float groundDashMoveTime = 0.14f;
 
+
+    // Air horizontal dash
+    public float airHorizontalDashSpeed = 24f;
+
+    // Small upward kick on a pure sideways air dash
+    public float airHorizontalDashLift = 3f;
+
+    // How long the sideways air dash accelerates/eases
+    public float airHorizontalDashMoveTime = 0.14f;
+
+
+    // Diagonal / vertical dash values
     public float diagonalDashHorizontalSpeed = 4f;
-
-    public float upDashForce = 16f;
-
+    public float upDashForce = 14f;
     public float downwardDashSpeed = 14f;
 
+    // Used for W, W+D, S, etc.
     public float dashDuration = 0.045f;
 
-    public float groundDashEndPause = 0.1f;
 
+    // =========================
+    // DASH RECOVERY
+    // =========================
+
+    public float groundDashEndPause = 0.1f;
     public float airDashLandingPause = 0.1f;
+
+
+    // =========================
+    // DASH COOLDOWN
+    // =========================
 
     public float dashCooldown = 0.5f;
 
 
-    // How long the game remembers your last
-    // horizontal direction after releasing A/D
-    public float dashDirectionMemory = 0.3f;
+    // =========================
+    // DASH DIRECTION MEMORY
+    // =========================
+
+    // Your current value was 3 seconds.
+    public float dashDirectionMemory = 3f;
 
 
     // =========================
     // DASH INVENTORY
     // =========================
 
-    // Final game maximum should be 3.
-    // You can raise this in the Inspector while testing.
-    public int maxDashCharges = 3;
+    // Huge values for testing.
+    // Later you can put this back to 3.
+    public int maxDashCharges = 9999;
 
     [SerializeField]
-    private int dashCharges = 0;
+    private int dashCharges = 9999;
 
 
     // =========================
@@ -91,7 +114,6 @@ public class PlayerMovement : MonoBehaviour
     // -1 = left
     private int facingDirection = 1;
 
-    // Remembers when A or D was last held
     private float lastHorizontalInputTime = -999f;
 
     private bool landingPausePending = false;
@@ -122,12 +144,13 @@ public class PlayerMovement : MonoBehaviour
         vertical = Input.GetAxisRaw("Vertical");
 
 
-        // Remember most recent horizontal direction
+        // Remember the most recent horizontal direction
         if (horizontal > 0)
         {
             facingDirection = 1;
             lastHorizontalInputTime = Time.time;
         }
+
         else if (horizontal < 0)
         {
             facingDirection = -1;
@@ -181,6 +204,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 StartCoroutine(GroundDash());
             }
+
             else
             {
                 StartCoroutine(AirDash());
@@ -190,23 +214,22 @@ public class PlayerMovement : MonoBehaviour
 
 
     // =========================
-    // PHYSICS / MOVEMENT
+    // NORMAL MOVEMENT
     // =========================
 
     void FixedUpdate()
     {
-        // First check whether the Player's feet
-        // are actually touching a Ground layer.
         CheckGround();
 
 
+        // Normal movement should not overwrite
+        // dash velocity or recovery pauses.
         if (isDashing || controlsLocked)
         {
             return;
         }
 
 
-        // Ground movement
         if (isGrounded)
         {
             rb.linearVelocity = new Vector2(
@@ -215,7 +238,6 @@ public class PlayerMovement : MonoBehaviour
             );
         }
 
-        // Air movement
         else
         {
             rb.linearVelocity = new Vector2(
@@ -227,30 +249,32 @@ public class PlayerMovement : MonoBehaviour
 
 
     // =========================
-    // GROUND DETECTION
+    // GROUND CHECK
     // =========================
 
     void CheckGround()
     {
-        bool touchingGround = Physics2D.OverlapCircle(
-            groundCheck.position,
-            groundCheckRadius,
-            groundLayer
-        );
+        if (groundCheck == null)
+        {
+            return;
+        }
 
 
-        // Only count as grounded if we're standing
-        // still vertically or moving downward.
-        //
-        // This prevents the detector from instantly
-        // resetting jumps while launching upward.
+        bool touchingGround =
+            Physics2D.OverlapCircle(
+                groundCheck.position,
+                groundCheckRadius,
+                groundLayer
+            );
+
+
         bool groundedNow =
             touchingGround
             &&
             rb.linearVelocity.y <= 0.1f;
 
 
-        // Detect the exact moment we land.
+        // We were in the air and just landed.
         if (groundedNow && !wasGrounded)
         {
             Landed();
@@ -263,7 +287,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     // =========================
-    // REMEMBER DASH DIRECTION
+    // DASH DIRECTION MEMORY
     // =========================
 
     int GetDashHorizontalDirection()
@@ -282,7 +306,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        // A/D was recently released
+        // Recently released A or D
         if (
             Time.time - lastHorizontalInputTime
             <= dashDirectionMemory
@@ -292,7 +316,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        // No recent horizontal direction
         return 0;
     }
 
@@ -303,50 +326,134 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator GroundDash()
     {
-        // Spend one dash charge
         dashCharges--;
 
-
-        // Start dash cooldown
         nextDashTime =
             Time.time + dashCooldown;
-
 
         isDashing = true;
 
 
-        int dashDirection =
+        int direction =
             GetDashHorizontalDirection();
 
 
-        // If standing still, dash toward
-        // whichever way we last faced.
-        if (dashDirection == 0)
+        if (direction == 0)
         {
-            dashDirection = facingDirection;
+            direction = facingDirection;
         }
 
 
-        rb.linearVelocity = new Vector2(
-            dashDirection * groundDashSpeed,
-            rb.linearVelocity.y
-        );
+        float startX =
+            rb.linearVelocity.x;
+
+        float peakX =
+            direction * groundDashSpeed;
 
 
-        // Actual dash burst
-        yield return new WaitForSeconds(
-            dashDuration
-        );
+        // If still holding that direction,
+        // ease back into normal running speed.
+        // Otherwise ease toward zero.
+        float endX = 0f;
 
 
-        // Stop horizontal movement
+        if (
+            Mathf.Abs(horizontal) > 0.01f
+            &&
+            Mathf.Sign(horizontal) == direction
+        )
+        {
+            endX =
+                direction * moveSpeed;
+        }
+
+
+        // First portion accelerates into the dash.
+        float accelerationTime =
+            groundDashMoveTime * 0.3f;
+
+        // Rest of the time eases back out.
+        float decelerationTime =
+            groundDashMoveTime - accelerationTime;
+
+
+        float elapsed = 0f;
+
+
+        // =========================
+        // ACCELERATE
+        // =========================
+
+        while (elapsed < accelerationTime)
+        {
+            float t =
+                elapsed / accelerationTime;
+
+            t = Smooth(t);
+
+
+            float newX =
+                Mathf.Lerp(
+                    startX,
+                    peakX,
+                    t
+                );
+
+
+            rb.linearVelocity = new Vector2(
+                newX,
+                rb.linearVelocity.y
+            );
+
+
+            elapsed += Time.fixedDeltaTime;
+
+            yield return new WaitForFixedUpdate();
+        }
+
+
+        elapsed = 0f;
+
+
+        // =========================
+        // EASE OUT
+        // =========================
+
+        while (elapsed < decelerationTime)
+        {
+            float t =
+                elapsed / decelerationTime;
+
+            t = Smooth(t);
+
+
+            float newX =
+                Mathf.Lerp(
+                    peakX,
+                    endX,
+                    t
+                );
+
+
+            rb.linearVelocity = new Vector2(
+                newX,
+                rb.linearVelocity.y
+            );
+
+
+            elapsed += Time.fixedDeltaTime;
+
+            yield return new WaitForFixedUpdate();
+        }
+
+
         rb.linearVelocity = new Vector2(
             0f,
             rb.linearVelocity.y
         );
 
 
-        // Ground recovery pause
+        // Small recovery after ground dash
         yield return new WaitForSeconds(
             groundDashEndPause
         );
@@ -362,128 +469,111 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator AirDash()
     {
-        // Spend one dash charge
         dashCharges--;
 
-
-        // Start dash cooldown
         nextDashTime =
             Time.time + dashCooldown;
 
-
         isDashing = true;
 
-
-        // Remember that we need a recovery pause
-        // when we eventually land.
         landingPausePending = true;
 
 
-        float newX = rb.linearVelocity.x;
-        float newY = rb.linearVelocity.y;
-
-
-        int dashHorizontalDirection =
+        int horizontalDirection =
             GetDashHorizontalDirection();
 
 
         bool hasHorizontalDirection =
-            dashHorizontalDirection != 0;
+            horizontalDirection != 0;
 
 
         // =========================
         // UP DASH
+        // W + RIGHT CLICK
         // =========================
 
         if (vertical > 0)
         {
-            newY = upDashForce;
+            float newX = 0f;
 
 
-            // Up + left/right
             if (hasHorizontalDirection)
             {
+                // W + A/D
                 newX =
-                    dashHorizontalDirection
+                    horizontalDirection
                     * diagonalDashHorizontalSpeed;
             }
 
-            // Pure upward dash
-            else
-            {
-                newX = 0f;
-            }
+
+            rb.linearVelocity = new Vector2(
+                newX,
+                upDashForce
+            );
+
+
+            yield return new WaitForSeconds(
+                dashDuration
+            );
+
+
+            isDashing = false;
+
+            yield break;
         }
 
 
         // =========================
         // DOWN DASH
+        // S + RIGHT CLICK
         // =========================
 
-        else if (vertical < 0)
+        if (vertical < 0)
         {
-            newY = -downwardDashSpeed;
+            float newX = 0f;
 
 
-            // Down + left/right
             if (hasHorizontalDirection)
             {
                 newX =
-                    dashHorizontalDirection
+                    horizontalDirection
                     * diagonalDashHorizontalSpeed;
             }
 
-            // Pure downward dash
-            else
-            {
-                newX = 0f;
-            }
+
+            rb.linearVelocity = new Vector2(
+                newX,
+                -downwardDashSpeed
+            );
+
+
+            yield return new WaitForSeconds(
+                dashDuration
+            );
+
+
+            isDashing = false;
+
+            yield break;
         }
 
 
         // =========================
-        // HORIZONTAL AIR DASH
+        // SIDEWAYS AIR DASH
+        // A/D + RIGHT CLICK
         // =========================
 
-        else if (hasHorizontalDirection)
+        if (!hasHorizontalDirection)
         {
-            newX =
-                dashHorizontalDirection
-                * airHorizontalDashSpeed;
-
-
-            // Preserve whatever upward/downward
-            // momentum the jump already had.
-            newY = rb.linearVelocity.y;
+            horizontalDirection =
+                facingDirection;
         }
 
 
-        // =========================
-        // NOTHING HELD
-        // =========================
-
-        else
-        {
-            // Continue toward the player's
-            // most recently faced direction.
-            newX =
-                facingDirection
-                * airHorizontalDashSpeed;
-
-
-            // Keep current jump/fall momentum.
-            newY = rb.linearVelocity.y;
-        }
-
-
-        rb.linearVelocity = new Vector2(
-            newX,
-            newY
-        );
-
-
-        yield return new WaitForSeconds(
-            dashDuration
+        yield return StartCoroutine(
+            HorizontalAirDash(
+                horizontalDirection
+            )
         );
 
 
@@ -492,7 +582,144 @@ public class PlayerMovement : MonoBehaviour
 
 
     // =========================
-    // DASH PICKUP
+    // SMOOTH SIDEWAYS AIR DASH
+    // =========================
+
+    IEnumerator HorizontalAirDash(
+        int direction
+    )
+    {
+        float startX =
+            rb.linearVelocity.x;
+
+
+        float peakX =
+            direction
+            * airHorizontalDashSpeed;
+
+
+        // Give the sideways dash a small upward
+        // boost so it feels like an aerial movement
+        // rather than a sideways teleport.
+        float newY =
+            Mathf.Max(
+                rb.linearVelocity.y,
+                airHorizontalDashLift
+            );
+
+
+        rb.linearVelocity = new Vector2(
+            rb.linearVelocity.x,
+            newY
+        );
+
+
+        // If A/D is still held,
+        // finish at normal air movement speed.
+        //
+        // Otherwise ease toward zero.
+        float endX = 0f;
+
+
+        if (
+            Mathf.Abs(horizontal) > 0.01f
+            &&
+            Mathf.Sign(horizontal) == direction
+        )
+        {
+            endX =
+                direction * airMoveSpeed;
+        }
+
+
+        float accelerationTime =
+            airHorizontalDashMoveTime * 0.3f;
+
+
+        float decelerationTime =
+            airHorizontalDashMoveTime
+            - accelerationTime;
+
+
+        float elapsed = 0f;
+
+
+        // =========================
+        // ACCELERATE
+        // =========================
+
+        while (elapsed < accelerationTime)
+        {
+            float t =
+                elapsed / accelerationTime;
+
+            t = Smooth(t);
+
+
+            float newX =
+                Mathf.Lerp(
+                    startX,
+                    peakX,
+                    t
+                );
+
+
+            rb.linearVelocity = new Vector2(
+                newX,
+                rb.linearVelocity.y
+            );
+
+
+            elapsed += Time.fixedDeltaTime;
+
+            yield return new WaitForFixedUpdate();
+        }
+
+
+        elapsed = 0f;
+
+
+        // =========================
+        // EASE OUT
+        // =========================
+
+        while (elapsed < decelerationTime)
+        {
+            float t =
+                elapsed / decelerationTime;
+
+            t = Smooth(t);
+
+
+            float newX =
+                Mathf.Lerp(
+                    peakX,
+                    endX,
+                    t
+                );
+
+
+            rb.linearVelocity = new Vector2(
+                newX,
+                rb.linearVelocity.y
+            );
+
+
+            elapsed += Time.fixedDeltaTime;
+
+            yield return new WaitForFixedUpdate();
+        }
+
+
+        rb.linearVelocity = new Vector2(
+            endX,
+            rb.linearVelocity.y
+        );
+    }
+
+
+    // =========================
+    // DASH PICKUP SUPPORT
     // =========================
 
     public bool AddDashCharge()
@@ -506,10 +733,11 @@ public class PlayerMovement : MonoBehaviour
         dashCharges++;
 
 
-        dashCharges = Mathf.Min(
-            dashCharges,
-            maxDashCharges
-        );
+        dashCharges =
+            Mathf.Min(
+                dashCharges,
+                maxDashCharges
+            );
 
 
         return true;
@@ -517,22 +745,18 @@ public class PlayerMovement : MonoBehaviour
 
 
     // =========================
-    // LANDED
+    // LANDING
     // =========================
 
     void Landed()
     {
         isGrounded = true;
 
-
         // Restore jumps.
-        //
-        // Dash charges DO NOT refill from landing.
         jumpsRemaining = maxJumps;
 
 
-        // If we used an air dash before landing,
-        // start the landing recovery pause.
+        // Landing does NOT restore dash charges.
         if (
             landingPausePending
             &&
@@ -540,6 +764,7 @@ public class PlayerMovement : MonoBehaviour
         )
         {
             landingPausePending = false;
+
 
             StartCoroutine(
                 LandingPause()
@@ -559,7 +784,6 @@ public class PlayerMovement : MonoBehaviour
         controlsLocked = true;
 
 
-        // Kill horizontal movement when landing.
         rb.linearVelocity = new Vector2(
             0f,
             rb.linearVelocity.y
@@ -578,7 +802,19 @@ public class PlayerMovement : MonoBehaviour
 
 
     // =========================
-    // DEBUG GROUND CHECK VISUAL
+    // SMOOTHING
+    // =========================
+
+    float Smooth(float value)
+    {
+        return value
+            * value
+            * (3f - 2f * value);
+    }
+
+
+    // =========================
+    // DEBUG GROUND CHECK
     // =========================
 
     void OnDrawGizmosSelected()
