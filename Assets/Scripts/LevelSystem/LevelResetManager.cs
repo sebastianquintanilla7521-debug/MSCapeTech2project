@@ -5,29 +5,17 @@ using System.Collections;
 public class LevelResetManager : MonoBehaviour
 {
     // ==================================================
-    // LEVEL DESIGNER SETTINGS
+    // SETTINGS
     // ==================================================
 
     [Header("Reset Settings")]
-
-    [Tooltip(
-        "How long the game waits after the player fails " +
-        "before restarting the level."
-    )]
-    [Min(0f)]
     [SerializeField]
     private float resetDelay = 0.5f;
 
 
     [Header("Testing")]
-
-    [Tooltip(
-        "Allows the level designer to press R " +
-        "to quickly restart while testing."
-    )]
     [SerializeField]
     private bool allowRestartKey = true;
-
 
     [SerializeField]
     private KeyCode restartKey = KeyCode.R;
@@ -47,8 +35,7 @@ public class LevelResetManager : MonoBehaviour
     private void Update()
     {
         if (
-            allowRestartKey
-            &&
+            allowRestartKey &&
             Input.GetKeyDown(restartKey)
         )
         {
@@ -58,7 +45,7 @@ public class LevelResetManager : MonoBehaviour
 
 
     // ==================================================
-    // PLAYER FAILED
+    // FAIL LEVEL
     // ==================================================
 
     public void FailLevel()
@@ -79,7 +66,7 @@ public class LevelResetManager : MonoBehaviour
 
 
     // ==================================================
-    // FAIL SEQUENCE
+    // FAIL DELAY
     // ==================================================
 
     private IEnumerator FailSequence()
@@ -99,8 +86,6 @@ public class LevelResetManager : MonoBehaviour
 
     public void ResetLevel()
     {
-        // Safety in case we later use
-        // slow motion or pause effects.
         Time.timeScale = 1f;
 
 
@@ -109,7 +94,7 @@ public class LevelResetManager : MonoBehaviour
 
 
         SceneManager.LoadScene(
-            currentScene.buildIndex
+            currentScene.name
         );
     }
 }
