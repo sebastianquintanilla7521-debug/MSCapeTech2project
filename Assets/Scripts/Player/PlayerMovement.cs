@@ -107,8 +107,20 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded;
     private bool wasGrounded;
 
+    public bool IsGrounded
+    {
+        get { return isGrounded; }
+    }
+
     private bool isDashing;
     private bool controlsLocked;
+
+    private bool isGroundDashing;
+
+    public bool IsGroundDashing
+    {
+        get { return isGroundDashing; }
+    }
 
     // 1 = right
     // -1 = left
@@ -332,6 +344,7 @@ public class PlayerMovement : MonoBehaviour
             Time.time + dashCooldown;
 
         isDashing = true;
+        isGroundDashing = true;
 
 
         int direction =
@@ -458,7 +471,7 @@ public class PlayerMovement : MonoBehaviour
             groundDashEndPause
         );
 
-
+        isGroundDashing = false;
         isDashing = false;
     }
 
