@@ -1601,6 +1601,10 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5155914960902759591, guid: 0bb43bcde3540fa4da7b796b803eeb61, type: 3}
+      propertyPath: loopForever
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155914960902759591, guid: 0bb43bcde3540fa4da7b796b803eeb61, type: 3}
       propertyPath: pathBehavior
       value: 1
       objectReference: {fileID: 0}
