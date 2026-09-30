@@ -9,13 +9,16 @@ public class LevelResetManager : MonoBehaviour
     // ==================================================
 
     [Header("Reset Settings")]
+
     [SerializeField]
     private float resetDelay = 0.5f;
 
 
     [Header("Testing")]
+
     [SerializeField]
     private bool allowRestartKey = true;
+
 
     [SerializeField]
     private KeyCode restartKey = KeyCode.R;
