@@ -1,0 +1,845 @@
+fileFormatVersion: 2
+guid: 68e9a58f9d0b00c4fac525f962d12aa6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 873388121137105853
+    second: Start Screen Options_0
+  - first:
+      213: 2481924011715974224
+    second: Start Screen Options_1
+  - first:
+      213: -3035030512626182739
+    second: Start Screen Options_2
+  - first:
+      213: 4829613827053164067
+    second: Start Screen Options_3
+  - first:
+      213: 8800277238734561161
+    second: Start Screen Options_4
+  - first:
+      213: 7165621067495279017
+    second: Start Screen Options_5
+  - first:
+      213: -5246218619569904687
+    second: Start Screen Options_6
+  - first:
+      213: 8297737974256030613
+    second: Start Screen Options_7
+  - first:
+      213: -8488588390889054422
+    second: Start Screen Options_8
+  - first:
+      213: -4227213153105053520
+    second: Start Screen Options_9
+  - first:
+      213: 3267043567935654305
+    second: Start Screen Options_10
+  - first:
+      213: -420012619359509342
+    second: Start Screen Options_11
+  - first:
+      213: -2123890023632563160
+    second: Start Screen Options_12
+  - first:
+      213: -9205044671754025716
+    second: Start Screen Options_13
+  - first:
+      213: -7907832015665827502
+    second: Start Screen Options_14
+  - first:
+      213: 7477613560512607808
+    second: Start Screen Options_15
+  - first:
+      213: -5296863328937460116
+    second: Start Screen Options_16
+  - first:
+      213: 3924056403213018062
+    second: Start Screen Options_17
+  - first:
+      213: 8747416940495720270
+    second: Start Screen Options_18
+  - first:
+      213: -4789341658602035344
+    second: Start Screen Options_19
+  - first:
+      213: 607965293598057048
+    second: Start Screen Options_20
+  - first:
+      213: 5121621585143072650
+    second: Start Screen Options_21
+  - first:
+      213: 6375946307750545793
+    second: Start Screen Options_22
+  - first:
+      213: -7118426378385092754
+    second: Start Screen Options_23
+  - first:
+      213: 7296932172528716138
+    second: Start Screen Options_24
+  - first:
+      213: -3056026741661250232
+    second: Start Screen Options_25
+  - first:
+      213: -5387479450573381224
+    second: Start Screen Options_26
+  - first:
+      213: 1981947476875329771
+    second: Start Screen Options_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Start Screen Options_0
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 325
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbb4c676ed5ee1c00800000000000000
+      internalID: 873388121137105853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start Screen Options_1
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 339
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 054d7d52db0917220800000000000000
+      internalID: 2481924011715974224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start Screen Options_2
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 334
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da5d17c34d761e5d0800000000000000
+      internalID: -3035030512626182739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start Screen Options_3
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 313
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32691d3ff2c360340800000000000000
+      internalID: 4829613827053164067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start Screen Options_4
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 256
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98f9ab3d58dd02a70800000000000000
+      internalID: 8800277238734561161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start Screen Options_5
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 268
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a98c135566617360800000000000000
+      internalID: 7165621067495279017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start Screen Options_6
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 263
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d3ee7e06ffa137b0800000000000000
+      internalID: -5246218619569904687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start Screen Options_7
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 273
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 593dcca69bc772370800000000000000
+      internalID: 8297737974256030613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start Screen Options_8
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 229
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2f9d8c35d9723a80800000000000000
+      internalID: -8488588390889054422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start Screen Options_9
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 237
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b87053b80ce555c0800000000000000
+      internalID: -4227213153105053520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start Screen Options_10
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 245
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a98784c0ded65d20800000000000000
+      internalID: 3267043567935654305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start Screen Options_11
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 174
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a425ed7fb0db2af0800000000000000
+      internalID: -420012619359509342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start Screen Options_12
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 184
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 824926fb64d6682e0800000000000000
+      internalID: -2123890023632563160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start Screen Options_13
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 149
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c05cf7634ac114080800000000000000
+      internalID: -9205044671754025716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start Screen Options_14
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 156
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 251f6c2edacb14290800000000000000
+      internalID: -7907832015665827502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start Screen Options_15
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0467ff94ae1d5c760800000000000000
+      internalID: 7477613560512607808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start Screen Options_16
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 164
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6eb3e6cdd2cd76b0800000000000000
+      internalID: -5296863328937460116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start Screen Options_17
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 126
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec3eb18128c057630800000000000000
+      internalID: 3924056403213018062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start Screen Options_18
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 139
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4f4b709c51156970800000000000000
+      internalID: 8747416940495720270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start Screen Options_19
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 63
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 077ab03f227d88db0800000000000000
+      internalID: -4789341658602035344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start Screen Options_20
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 45
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 852ada0a63def6800800000000000000
+      internalID: 607965293598057048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start Screen Options_21
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 57
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a870d6832b7a31740800000000000000
+      internalID: 5121621585143072650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start Screen Options_22
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 73
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1894f6cb269eb7850800000000000000
+      internalID: 6375946307750545793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start Screen Options_23
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 35
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6f06948ce4463d90800000000000000
+      internalID: -7118426378385092754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start Screen Options_24
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 32
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6981bd6629e34560800000000000000
+      internalID: 7296932172528716138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start Screen Options_25
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 38
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84dcf27bedfc695d0800000000000000
+      internalID: -3056026741661250232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start Screen Options_26
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 36
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8916bd9dbf3db35b0800000000000000
+      internalID: -5387479450573381224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start Screen Options_27
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 18
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be0c2aababa418b10800000000000000
+      internalID: 1981947476875329771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Start Screen Options_0: 873388121137105853
+      Start Screen Options_1: 2481924011715974224
+      Start Screen Options_10: 3267043567935654305
+      Start Screen Options_11: -420012619359509342
+      Start Screen Options_12: -2123890023632563160
+      Start Screen Options_13: -9205044671754025716
+      Start Screen Options_14: -7907832015665827502
+      Start Screen Options_15: 7477613560512607808
+      Start Screen Options_16: -5296863328937460116
+      Start Screen Options_17: 3924056403213018062
+      Start Screen Options_18: 8747416940495720270
+      Start Screen Options_19: -4789341658602035344
+      Start Screen Options_2: -3035030512626182739
+      Start Screen Options_20: 607965293598057048
+      Start Screen Options_21: 5121621585143072650
+      Start Screen Options_22: 6375946307750545793
+      Start Screen Options_23: -7118426378385092754
+      Start Screen Options_24: 7296932172528716138
+      Start Screen Options_25: -3056026741661250232
+      Start Screen Options_26: -5387479450573381224
+      Start Screen Options_27: 1981947476875329771
+      Start Screen Options_3: 4829613827053164067
+      Start Screen Options_4: 8800277238734561161
+      Start Screen Options_5: 7165621067495279017
+      Start Screen Options_6: -5246218619569904687
+      Start Screen Options_7: 8297737974256030613
+      Start Screen Options_8: -8488588390889054422
+      Start Screen Options_9: -4227213153105053520
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
