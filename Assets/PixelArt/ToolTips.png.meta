@@ -1,0 +1,437 @@
+fileFormatVersion: 2
+guid: 8e559c2770db1284d9defa9c885dfc32
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4525587199561535276
+    second: ToolTips_0
+  - first:
+      213: 2108617736965676851
+    second: ToolTips_1
+  - first:
+      213: 8033416971182203648
+    second: ToolTips_2
+  - first:
+      213: -45070849343187105
+    second: ToolTips_3
+  - first:
+      213: 6991188406679990434
+    second: ToolTips_4
+  - first:
+      213: 3503330472972145607
+    second: ToolTips_5
+  - first:
+      213: -5956306461287839914
+    second: ToolTips_6
+  - first:
+      213: -1150746935897618365
+    second: ToolTips_7
+  - first:
+      213: 3949920294163865117
+    second: ToolTips_8
+  - first:
+      213: 919408655338956940
+    second: ToolTips_9
+  - first:
+      213: -6578333243059033628
+    second: ToolTips_10
+  - first:
+      213: -5701776489589272797
+    second: ToolTips_11
+  - first:
+      213: -8583035822407300055
+    second: ToolTips_12
+  - first:
+      213: -5462342964915117457
+    second: ToolTips_13
+  - first:
+      213: -352450656955800682
+    second: ToolTips_14
+  - first:
+      213: 7925661890057143711
+    second: ToolTips_15
+  - first:
+      213: -609785507042754048
+    second: ToolTips_16
+  - first:
+      213: 5158012249414040014
+    second: ToolTips_17
+  - first:
+      213: -3314947502086503464
+    second: ToolTips_18
+  - first:
+      213: -4104787186516370917
+    second: ToolTips_19
+  - first:
+      213: -3987153292913899386
+    second: ToolTips_20
+  - first:
+      213: -6601153103217999699
+    second: ToolTips_21
+  - first:
+      213: -3705245378299178107
+    second: ToolTips_22
+  - first:
+      213: -6926134763202730357
+    second: ToolTips_23
+  - first:
+      213: 5305614409124432477
+    second: ToolTips_24
+  - first:
+      213: 6875141147532205796
+    second: ToolTips_25
+  - first:
+      213: 2409307632738300351
+    second: ToolTips_26
+  - first:
+      213: -6384182442747049759
+    second: ToolTips_27
+  - first:
+      213: 4108964628721180077
+    second: ToolTips_28
+  - first:
+      213: 8911234195853446108
+    second: ToolTips_29
+  - first:
+      213: -7018600675324739295
+    second: ToolTips_30
+  - first:
+      213: 8506647395684505464
+    second: ToolTips_31
+  - first:
+      213: -7350458248119360985
+    second: ToolTips_32
+  - first:
+      213: -2793149238377412435
+    second: ToolTips_33
+  - first:
+      213: -9033479292173036269
+    second: ToolTips_34
+  - first:
+      213: -1845869124842871553
+    second: ToolTips_35
+  - first:
+      213: -1795209545000914837
+    second: ToolTips_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ToolTips_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d0741a6b62e131c0800000000000000
+      internalID: -4525587199561535276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToolTips_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33f5deae8a0534d10800000000000000
+      internalID: 2108617736965676851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToolTips_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 003e8e32c2e6c7f60800000000000000
+      internalID: 8033416971182203648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToolTips_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f579c232d40ef5ff0800000000000000
+      internalID: -45070849343187105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToolTips_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a07df1a0d0b50160800000000000000
+      internalID: 6991188406679990434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToolTips_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c35e44f0845e9030800000000000000
+      internalID: 3503330472972145607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToolTips_6
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6570391d4d2f65da0800000000000000
+      internalID: -5956306461287839914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToolTips_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 348047b32c9b700f0800000000000000
+      internalID: -1150746935897618365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ToolTips_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1e5eb8749fe0d630800000000000000
+      internalID: 3949920294163865117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9052af32805d4f146a8a0a20b5eae14b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      ToolTips_0: -4525587199561535276
+      ToolTips_1: 2108617736965676851
+      ToolTips_2: 8033416971182203648
+      ToolTips_3: -45070849343187105
+      ToolTips_4: 6991188406679990434
+      ToolTips_5: 3503330472972145607
+      ToolTips_6: -5956306461287839914
+      ToolTips_7: -1150746935897618365
+      ToolTips_8: 3949920294163865117
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
