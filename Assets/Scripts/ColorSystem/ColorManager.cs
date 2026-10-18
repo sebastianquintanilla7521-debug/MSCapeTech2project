@@ -22,16 +22,9 @@ public class ColorManager : MonoBehaviour
     // LEVEL COLOR SETTINGS
     // =========================
 
-    // Level designer can choose whether
-    // the order is random or follows the list.
     public bool randomizeColorOrder = true;
 
 
-    // Level designer chooses:
-    //
-    // - how many colors are used
-    // - which colors are used
-    // - their order when randomization is OFF
     public List<GameColor> colorRotation =
         new List<GameColor>()
         {
@@ -45,7 +38,8 @@ public class ColorManager : MonoBehaviour
     // CURRENT COLOR
     // =========================
 
-    public GameColor currentColor = GameColor.Red;
+    public GameColor currentColor =
+        GameColor.Red;
 
     public GameColor nextColor;
 
@@ -54,9 +48,19 @@ public class ColorManager : MonoBehaviour
     // TIMING
     // =========================
 
+    [Header("Color Timing")]
+
     public float colorDuration = 4f;
 
     public float warningDuration = 2f;
+
+
+    [Tooltip(
+        "How many seconds before the background changes " +
+        "matching platforms become visible and solid again."
+    )]
+    [Min(0f)]
+    public float platformReappearEarly = 0.5f;
 
 
     // =========================
@@ -64,22 +68,52 @@ public class ColorManager : MonoBehaviour
     // =========================
 
     public Color redColor =
-        new Color32(255, 75, 75, 255);
+        new Color32(
+            255,
+            75,
+            75,
+            255
+        );
 
     public Color orangeColor =
-        new Color32(255, 138, 61, 255);
+        new Color32(
+            255,
+            138,
+            61,
+            255
+        );
 
     public Color yellowColor =
-        new Color32(255, 216, 77, 255);
+        new Color32(
+            255,
+            216,
+            77,
+            255
+        );
 
     public Color greenColor =
-        new Color32(82, 210, 115, 255);
+        new Color32(
+            82,
+            210,
+            115,
+            255
+        );
 
     public Color blueColor =
-        new Color32(77, 124, 255, 255);
+        new Color32(
+            77,
+            124,
+            255,
+            255
+        );
 
     public Color purpleColor =
-        new Color32(166, 107, 255, 255);
+        new Color32(
+            166,
+            107,
+            255,
+            255
+        );
 
 
     // =========================
@@ -97,13 +131,19 @@ public class ColorManager : MonoBehaviour
 
     public bool IsWarning
     {
-        get { return isWarning; }
+        get
+        {
+            return isWarning;
+        }
     }
 
 
     public float WarningProgress
     {
-        get { return warningProgress; }
+        get
+        {
+            return warningProgress;
+        }
     }
 
 
@@ -117,18 +157,32 @@ public class ColorManager : MonoBehaviour
 
 
     // =========================
+    // PUBLIC TIMING INFO
+    // =========================
+
+    public float ColorTimer
+    {
+        get
+        {
+            return colorTimer;
+        }
+    }
+
+
+    // =========================
     // START
     // =========================
 
     void Start()
     {
-        mainCamera = Camera.main;
+        mainCamera =
+            Camera.main;
 
 
-        // Safety check:
-        // Make sure the list has at least one color.
-        if (colorRotation == null ||
-            colorRotation.Count == 0)
+        if (
+            colorRotation == null ||
+            colorRotation.Count == 0
+        )
         {
             colorRotation =
                 new List<GameColor>()
@@ -138,15 +192,14 @@ public class ColorManager : MonoBehaviour
         }
 
 
-        // Start on the first color chosen
-        // by the level designer.
         currentColor =
             colorRotation[0];
 
 
-        // Decide what comes next.
         nextColor =
-            GetNextColor(currentColor);
+            GetNextColor(
+                currentColor
+            );
 
 
         UpdateBackgroundColor();
@@ -159,20 +212,26 @@ public class ColorManager : MonoBehaviour
 
     void Update()
     {
-        colorTimer += Time.deltaTime;
+        colorTimer +=
+            Time.deltaTime;
 
 
         float warningStartTime =
-            colorDuration - warningDuration;
+            colorDuration -
+            warningDuration;
 
 
         // =========================
         // WARNING PERIOD
         // =========================
 
-        if (colorTimer >= warningStartTime)
+        if (
+            colorTimer >=
+            warningStartTime
+        )
         {
-            isWarning = true;
+            isWarning =
+                true;
 
 
             warningProgress =
@@ -185,9 +244,11 @@ public class ColorManager : MonoBehaviour
 
         else
         {
-            isWarning = false;
+            isWarning =
+                false;
 
-            warningProgress = 0f;
+            warningProgress =
+                0f;
         }
 
 
@@ -195,10 +256,65 @@ public class ColorManager : MonoBehaviour
         // ACTUAL COLOR CHANGE
         // =========================
 
-        if (colorTimer >= colorDuration)
+        if (
+            colorTimer >=
+            colorDuration
+        )
         {
             ChangeColor();
         }
+    }
+
+
+    // =========================
+    // SHOULD PLATFORM BE HIDDEN
+    // =========================
+
+    public bool ShouldPlatformBeHidden(
+        GameColor platformColor
+    )
+    {
+        // Different color from background:
+        // platform should be visible.
+        if (
+            platformColor !=
+            currentColor
+        )
+        {
+            return false;
+        }
+
+
+        // Matching platform normally disappears,
+        // but we bring it back slightly before
+        // the current background color ends.
+        float safeReappearEarly =
+            Mathf.Clamp(
+                platformReappearEarly,
+                0f,
+                colorDuration
+            );
+
+
+        float reappearTime =
+            colorDuration -
+            safeReappearEarly;
+
+
+        // Before the early-return point:
+        // hide it.
+        if (
+            colorTimer <
+            reappearTime
+        )
+        {
+            return true;
+        }
+
+
+        // During the final X seconds:
+        // bring it back early.
+        return false;
     }
 
 
@@ -208,21 +324,24 @@ public class ColorManager : MonoBehaviour
 
     void ChangeColor()
     {
-        // The color that was warned about
-        // now becomes active.
-        currentColor = nextColor;
+        currentColor =
+            nextColor;
 
 
-        // Choose the color after that.
         nextColor =
-            GetNextColor(currentColor);
+            GetNextColor(
+                currentColor
+            );
 
 
-        colorTimer = 0f;
+        colorTimer =
+            0f;
 
-        isWarning = false;
+        isWarning =
+            false;
 
-        warningProgress = 0f;
+        warningProgress =
+            0f;
 
 
         UpdateBackgroundColor();
@@ -233,21 +352,25 @@ public class ColorManager : MonoBehaviour
     // CHOOSE NEXT COLOR
     // =========================
 
-    GameColor GetNextColor(GameColor color)
+    GameColor GetNextColor(
+        GameColor color
+    )
     {
-        // Safety
-        if (colorRotation == null ||
-            colorRotation.Count == 0)
+        if (
+            colorRotation == null ||
+            colorRotation.Count == 0
+        )
         {
             return GameColor.Red;
         }
 
 
-        // If only one color is in the level,
-        // there is nowhere else to go.
-        if (colorRotation.Count == 1)
+        if (
+            colorRotation.Count == 1
+        )
         {
-            return colorRotation[0];
+            return
+                colorRotation[0];
         }
 
 
@@ -255,28 +378,35 @@ public class ColorManager : MonoBehaviour
         // RANDOMIZED
         // =========================
 
-        if (randomizeColorOrder)
+        if (
+            randomizeColorOrder
+        )
         {
-            // First check whether there actually
-            // IS another different color available.
-            bool differentColorExists = false;
+            bool differentColorExists =
+                false;
 
 
-            foreach (GameColor availableColor
-                     in colorRotation)
+            foreach (
+                GameColor availableColor
+                in colorRotation
+            )
             {
-                if (availableColor != color)
+                if (
+                    availableColor !=
+                    color
+                )
                 {
-                    differentColorExists = true;
+                    differentColorExists =
+                        true;
 
                     break;
                 }
             }
 
 
-            // If every entry is somehow the
-            // same color, just return it.
-            if (!differentColorExists)
+            if (
+                !differentColorExists
+            )
             {
                 return color;
             }
@@ -285,9 +415,6 @@ public class ColorManager : MonoBehaviour
             GameColor randomColor;
 
 
-            // Keep choosing until we get
-            // something different from
-            // the current color.
             do
             {
                 int randomIndex =
@@ -298,10 +425,15 @@ public class ColorManager : MonoBehaviour
 
 
                 randomColor =
-                    colorRotation[randomIndex];
+                    colorRotation[
+                        randomIndex
+                    ];
             }
 
-            while (randomColor == color);
+            while (
+                randomColor ==
+                color
+            );
 
 
             return randomColor;
@@ -313,14 +445,17 @@ public class ColorManager : MonoBehaviour
         // =========================
 
         int currentIndex =
-            colorRotation.IndexOf(color);
+            colorRotation.IndexOf(
+                color
+            );
 
 
-        // If the current color somehow isn't
-        // in the list, start at the beginning.
-        if (currentIndex == -1)
+        if (
+            currentIndex == -1
+        )
         {
-            return colorRotation[0];
+            return
+                colorRotation[0];
         }
 
 
@@ -328,15 +463,20 @@ public class ColorManager : MonoBehaviour
             currentIndex + 1;
 
 
-        // If we reached the end,
-        // loop back to the beginning.
-        if (nextIndex >= colorRotation.Count)
+        if (
+            nextIndex >=
+            colorRotation.Count
+        )
         {
-            nextIndex = 0;
+            nextIndex =
+                0;
         }
 
 
-        return colorRotation[nextIndex];
+        return
+            colorRotation[
+                nextIndex
+            ];
     }
 
 
@@ -346,10 +486,14 @@ public class ColorManager : MonoBehaviour
 
     void UpdateBackgroundColor()
     {
-        if (mainCamera != null)
+        if (
+            mainCamera != null
+        )
         {
             mainCamera.backgroundColor =
-                GetUnityColor(currentColor);
+                GetUnityColor(
+                    currentColor
+                );
         }
     }
 
@@ -358,29 +502,46 @@ public class ColorManager : MonoBehaviour
     // GET UNITY COLOR
     // =========================
 
-    public Color GetUnityColor(GameColor color)
+    public Color GetUnityColor(
+        GameColor color
+    )
     {
-        if (color == GameColor.Red)
+        if (
+            color ==
+            GameColor.Red
+        )
         {
             return redColor;
         }
 
-        else if (color == GameColor.Orange)
+        else if (
+            color ==
+            GameColor.Orange
+        )
         {
             return orangeColor;
         }
 
-        else if (color == GameColor.Yellow)
+        else if (
+            color ==
+            GameColor.Yellow
+        )
         {
             return yellowColor;
         }
 
-        else if (color == GameColor.Green)
+        else if (
+            color ==
+            GameColor.Green
+        )
         {
             return greenColor;
         }
 
-        else if (color == GameColor.Blue)
+        else if (
+            color ==
+            GameColor.Blue
+        )
         {
             return blueColor;
         }

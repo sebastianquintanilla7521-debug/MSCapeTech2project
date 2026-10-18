@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -26,6 +27,22 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius = 0.18f;
     public LayerMask groundLayer;
+
+
+    // =========================
+    // COLOR PLATFORM DROP THROUGH
+    // =========================
+
+    [Header("Color Platform Drop Through")]
+
+    [Tooltip("ONLY select the ColorPlatform layer here.")]
+    public LayerMask colorPlatformLayer;
+
+    [Tooltip(
+        "How long collision with the ColorPlatform is ignored " +
+        "during a downward dash."
+    )]
+    public float colorPlatformDropIgnoreTime = 0.20f;
 
 
     // =========================
@@ -122,6 +139,25 @@ public class PlayerMovement : MonoBehaviour
         get { return isGroundDashing; }
     }
 
+
+    private bool isDroppingThroughColorPlatform;
+
+
+    private readonly List<Collider2D>
+        ignoredPlayerColliders =
+        new List<Collider2D>();
+
+    private readonly List<Collider2D>
+        ignoredPlatformColliders =
+        new List<Collider2D>();
+
+
+    // Moving platforms refresh this while they are
+    // physically supporting the player.
+    private float movingPlatformGroundedUntil =
+        -999f;
+
+
     // 1 = right
     // -1 = left
     private int facingDirection = 1;
@@ -191,6 +227,9 @@ public class PlayerMovement : MonoBehaviour
 
             jumpsRemaining--;
 
+            movingPlatformGroundedUntil =
+                -999f;
+
             isGrounded = false;
         }
 
@@ -212,14 +251,33 @@ public class PlayerMovement : MonoBehaviour
             !controlsLocked
         )
         {
-            if (isGrounded)
+            // S + Right Click while standing on a
+            // ColorPlatform drops through it.
+            if (
+                isGrounded
+                &&
+                vertical < -0.01f
+                &&
+                IsStandingOnColorPlatform()
+            )
             {
-                StartCoroutine(GroundDash());
+                StartCoroutine(
+                    ColorPlatformDownDash()
+                );
+            }
+
+            else if (isGrounded)
+            {
+                StartCoroutine(
+                    GroundDash()
+                );
             }
 
             else
             {
-                StartCoroutine(AirDash());
+                StartCoroutine(
+                    AirDash()
+                );
             }
         }
     }
@@ -272,29 +330,230 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        bool touchingGround =
+        int layerMaskToCheck =
+            groundLayer.value;
+
+
+        if (isDroppingThroughColorPlatform)
+        {
+            layerMaskToCheck =
+                groundLayer.value
+                &
+                ~colorPlatformLayer.value;
+        }
+
+
+        Collider2D touchingGround =
             Physics2D.OverlapCircle(
                 groundCheck.position,
                 groundCheckRadius,
-                groundLayer
+                layerMaskToCheck
             );
 
 
+        bool supportedByMovingPlatform =
+            Time.time <=
+            movingPlatformGroundedUntil;
+
+
         bool groundedNow =
-            touchingGround
+            touchingGround != null
             &&
-            rb.linearVelocity.y <= 0.1f;
+            (
+                rb.linearVelocity.y <= 0.1f
+                ||
+                supportedByMovingPlatform
+            );
 
 
-        // We were in the air and just landed.
-        if (groundedNow && !wasGrounded)
+        if (
+            groundedNow &&
+            !wasGrounded
+        )
         {
             Landed();
         }
 
 
-        isGrounded = groundedNow;
-        wasGrounded = groundedNow;
+        isGrounded =
+            groundedNow;
+
+        wasGrounded =
+            groundedNow;
+    }
+
+
+    // =========================
+    // MOVING PLATFORM SUPPORT
+    // =========================
+
+    public void RefreshMovingPlatformGrounding(
+        float platformVerticalSpeed
+    )
+    {
+        if (rb == null)
+        {
+            rb =
+                GetComponent<Rigidbody2D>();
+        }
+
+
+        // Standing on an upward-moving platform can give
+        // the player positive Y velocity. That should NOT
+        // count as a jump.
+        //
+        // A real jump is much faster than the platform,
+        // so once the player jumps away this stops refreshing.
+        if (
+            rb.linearVelocity.y <=
+            platformVerticalSpeed + 0.75f
+        )
+        {
+            movingPlatformGroundedUntil =
+                Time.time + 0.08f;
+        }
+    }
+
+
+    // =========================
+    // COLOR PLATFORM HELPERS
+    // =========================
+
+    bool IsStandingOnColorPlatform()
+    {
+        if (groundCheck == null)
+        {
+            return false;
+        }
+
+
+        Collider2D colorPlatform =
+            Physics2D.OverlapCircle(
+                groundCheck.position,
+                groundCheckRadius,
+                colorPlatformLayer
+            );
+
+
+        return colorPlatform != null;
+    }
+
+
+    Collider2D[] GetColorPlatformsUnderPlayer()
+    {
+        if (groundCheck == null)
+        {
+            return new Collider2D[0];
+        }
+
+
+        return Physics2D.OverlapCircleAll(
+            groundCheck.position,
+            groundCheckRadius,
+            colorPlatformLayer
+        );
+    }
+
+
+    void IgnoreColorPlatformCollisions(
+        Collider2D[] platforms
+    )
+    {
+        RestoreColorPlatformCollisions();
+
+
+        Collider2D[] playerColliders =
+            GetComponentsInChildren<Collider2D>();
+
+
+        foreach (
+            Collider2D playerCollider
+            in playerColliders
+        )
+        {
+            if (
+                playerCollider == null
+                ||
+                playerCollider.isTrigger
+            )
+            {
+                continue;
+            }
+
+
+            foreach (
+                Collider2D platformCollider
+                in platforms
+            )
+            {
+                if (
+                    platformCollider == null
+                    ||
+                    platformCollider.isTrigger
+                )
+                {
+                    continue;
+                }
+
+
+                Physics2D.IgnoreCollision(
+                    playerCollider,
+                    platformCollider,
+                    true
+                );
+
+
+                ignoredPlayerColliders.Add(
+                    playerCollider
+                );
+
+                ignoredPlatformColliders.Add(
+                    platformCollider
+                );
+            }
+        }
+    }
+
+
+    void RestoreColorPlatformCollisions()
+    {
+        int pairCount =
+            Mathf.Min(
+                ignoredPlayerColliders.Count,
+                ignoredPlatformColliders.Count
+            );
+
+
+        for (
+            int i = 0;
+            i < pairCount;
+            i++
+        )
+        {
+            Collider2D playerCollider =
+                ignoredPlayerColliders[i];
+
+            Collider2D platformCollider =
+                ignoredPlatformColliders[i];
+
+
+            if (
+                playerCollider != null
+                &&
+                platformCollider != null
+            )
+            {
+                Physics2D.IgnoreCollision(
+                    playerCollider,
+                    platformCollider,
+                    false
+                );
+            }
+        }
+
+
+        ignoredPlayerColliders.Clear();
+        ignoredPlatformColliders.Clear();
     }
 
 
@@ -473,6 +732,105 @@ public class PlayerMovement : MonoBehaviour
 
         isGroundDashing = false;
         isDashing = false;
+    }
+
+
+    // =========================
+    // COLOR PLATFORM DOWN DASH
+    // =========================
+
+    IEnumerator ColorPlatformDownDash()
+    {
+        Collider2D[] platforms =
+            GetColorPlatformsUnderPlayer();
+
+
+        if (platforms.Length == 0)
+        {
+            yield break;
+        }
+
+
+        dashCharges--;
+
+
+        nextDashTime =
+            Time.time +
+            dashCooldown;
+
+
+        isDashing = true;
+        isGroundDashing = true;
+
+        landingPausePending = true;
+
+        isDroppingThroughColorPlatform =
+            true;
+
+        movingPlatformGroundedUntil =
+            -999f;
+
+
+        IgnoreColorPlatformCollisions(
+            platforms
+        );
+
+
+        isGrounded = false;
+        wasGrounded = false;
+
+
+        float newX = 0f;
+
+
+        if (horizontal > 0.01f)
+        {
+            newX =
+                diagonalDashHorizontalSpeed;
+        }
+
+        else if (horizontal < -0.01f)
+        {
+            newX =
+                -diagonalDashHorizontalSpeed;
+        }
+
+
+        rb.linearVelocity =
+            new Vector2(
+                newX,
+                -downwardDashSpeed
+            );
+
+
+        yield return
+            new WaitForSeconds(
+                dashDuration
+            );
+
+
+        isGroundDashing = false;
+        isDashing = false;
+
+
+        float remainingIgnoreTime =
+            colorPlatformDropIgnoreTime -
+            dashDuration;
+
+
+        if (remainingIgnoreTime > 0f)
+        {
+            yield return
+                new WaitForSeconds(
+                    remainingIgnoreTime
+                );
+        }
+
+
+        RestoreColorPlatformCollisions();
+
+        isDroppingThroughColorPlatform =
+            false;
     }
 
 
@@ -811,6 +1169,19 @@ public class PlayerMovement : MonoBehaviour
         controlsLocked = false;
 
         landingPauseRunning = false;
+    }
+
+
+    // =========================
+    // SAFETY CLEANUP
+    // =========================
+
+    private void OnDisable()
+    {
+        RestoreColorPlatformCollisions();
+
+        isDroppingThroughColorPlatform =
+            false;
     }
 
 

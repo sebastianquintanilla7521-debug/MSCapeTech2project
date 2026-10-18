@@ -57,6 +57,31 @@ public class UniversalMovingPlatformEditor : Editor
 
 
     // ==================================================
+    // PLAYER INTERACTION
+    // ==================================================
+
+    private SerializedProperty carryPlayer;
+    private SerializedProperty jumpThroughFromBelow;
+    private SerializedProperty oneWayPlatformLayerName;
+    private SerializedProperty oneWaySurfaceArc;
+    private SerializedProperty dangerousPlatform;
+    private SerializedProperty dangerousHorizontalPlatformSprite;
+    private SerializedProperty dangerousVerticalPlatformSprite;
+
+
+    // ==================================================
+    // DIRECTIONAL PLATFORM SPRITES
+    // ==================================================
+
+    private SerializedProperty automaticDirectionalSprites;
+    private SerializedProperty horizontalPlatformSprite;
+    private SerializedProperty verticalPlatformSprite;
+    private SerializedProperty horizontalSpritesFaceRight;
+    private SerializedProperty verticalSpritesFaceUp;
+    private SerializedProperty directionChangeThreshold;
+
+
+    // ==================================================
     // GROWING PLATFORM
     // ==================================================
 
@@ -239,6 +264,81 @@ public class UniversalMovingPlatformEditor : Editor
         autoArrangeStartingSegments =
             serializedObject.FindProperty(
                 "autoArrangeStartingSegments"
+            );
+
+
+        // ==================================================
+        // PLAYER INTERACTION
+        // ==================================================
+
+        carryPlayer =
+            serializedObject.FindProperty(
+                "carryPlayer"
+            );
+
+        jumpThroughFromBelow =
+            serializedObject.FindProperty(
+                "jumpThroughFromBelow"
+            );
+
+        oneWayPlatformLayerName =
+            serializedObject.FindProperty(
+                "oneWayPlatformLayerName"
+            );
+
+        oneWaySurfaceArc =
+            serializedObject.FindProperty(
+                "oneWaySurfaceArc"
+            );
+
+        dangerousPlatform =
+            serializedObject.FindProperty(
+                "dangerousPlatform"
+            );
+
+        dangerousHorizontalPlatformSprite =
+            serializedObject.FindProperty(
+                "dangerousHorizontalPlatformSprite"
+            );
+
+        dangerousVerticalPlatformSprite =
+            serializedObject.FindProperty(
+                "dangerousVerticalPlatformSprite"
+            );
+
+
+        // ==================================================
+        // DIRECTIONAL PLATFORM SPRITES
+        // ==================================================
+
+        automaticDirectionalSprites =
+            serializedObject.FindProperty(
+                "automaticDirectionalSprites"
+            );
+
+        horizontalPlatformSprite =
+            serializedObject.FindProperty(
+                "horizontalPlatformSprite"
+            );
+
+        verticalPlatformSprite =
+            serializedObject.FindProperty(
+                "verticalPlatformSprite"
+            );
+
+        horizontalSpritesFaceRight =
+            serializedObject.FindProperty(
+                "horizontalSpritesFaceRight"
+            );
+
+        verticalSpritesFaceUp =
+            serializedObject.FindProperty(
+                "verticalSpritesFaceUp"
+            );
+
+        directionChangeThreshold =
+            serializedObject.FindProperty(
+                "directionChangeThreshold"
             );
 
 
@@ -859,6 +959,227 @@ public class UniversalMovingPlatformEditor : Editor
 
         EditorGUILayout.HelpBox(
             "Choose one platform segment prefab, set how many starting pieces you want, then press Build / Update.",
+            MessageType.Info
+        );
+
+
+        Space();
+
+
+        // ==================================================
+        // PLAYER INTERACTION
+        // ==================================================
+
+        Section(
+            "PLAYER INTERACTION"
+        );
+
+
+        if (carryPlayer != null)
+        {
+            EditorGUILayout.PropertyField(
+                carryPlayer,
+                new GUIContent(
+                    "Carry Player"
+                )
+            );
+        }
+
+
+        if (jumpThroughFromBelow != null)
+        {
+            EditorGUILayout.PropertyField(
+                jumpThroughFromBelow,
+                new GUIContent(
+                    "Jump Through From Below"
+                )
+            );
+
+
+            EditorGUI.BeginDisabledGroup(
+                !jumpThroughFromBelow.boolValue
+            );
+
+
+            if (oneWayPlatformLayerName != null)
+            {
+                EditorGUILayout.PropertyField(
+                    oneWayPlatformLayerName,
+                    new GUIContent(
+                        "One Way Platform Layer"
+                    )
+                );
+            }
+
+
+            if (oneWaySurfaceArc != null)
+            {
+                EditorGUILayout.PropertyField(
+                    oneWaySurfaceArc,
+                    new GUIContent(
+                        "One Way Surface Arc"
+                    )
+                );
+            }
+
+
+            EditorGUI.EndDisabledGroup();
+        }
+
+
+        if (dangerousPlatform != null)
+        {
+            EditorGUILayout.Space(4);
+
+            EditorGUILayout.PropertyField(
+                dangerousPlatform,
+                new GUIContent(
+                    "Dangerous Platform"
+                )
+            );
+
+
+            if (dangerousPlatform.boolValue)
+            {
+                EditorGUI.indentLevel++;
+
+
+                if (dangerousHorizontalPlatformSprite != null)
+                {
+                    EditorGUILayout.PropertyField(
+                        dangerousHorizontalPlatformSprite,
+                        new GUIContent(
+                            "Dangerous Horizontal Sprite"
+                        )
+                    );
+                }
+
+
+                if (dangerousVerticalPlatformSprite != null)
+                {
+                    EditorGUILayout.PropertyField(
+                        dangerousVerticalPlatformSprite,
+                        new GUIContent(
+                            "Dangerous Vertical Sprite"
+                        )
+                    );
+                }
+
+
+                EditorGUILayout.HelpBox(
+                    "Optional overrides. Leave either empty to use the normal " +
+                    "Horizontal / Vertical Sprite. Existing color tint is preserved.",
+                    MessageType.None
+                );
+
+
+                EditorGUI.indentLevel--;
+            }
+        }
+
+
+        EditorGUILayout.HelpBox(
+            "Carry Player keeps the player moving with the platform. " +
+            "Jump Through From Below makes the platform one-way and also " +
+            "uses the ColorPlatform layer so the player's S + Right Click " +
+            "down-dash can pass through it. Dangerous Platform resets the " +
+            "current level when the player collides with it. Dangerous sprite slots " +
+            "let you override the normal platform art for lethal variants.",
+            MessageType.Info
+        );
+
+
+        Space();
+
+
+        // ==================================================
+        // DIRECTIONAL PLATFORM SPRITES
+        // ==================================================
+
+        Section(
+            "DIRECTIONAL PLATFORM SPRITES"
+        );
+
+
+        if (automaticDirectionalSprites != null)
+        {
+            EditorGUILayout.PropertyField(
+                automaticDirectionalSprites,
+                new GUIContent(
+                    "Automatic Directional Sprites"
+                )
+            );
+
+
+            EditorGUI.BeginDisabledGroup(
+                !automaticDirectionalSprites.boolValue
+            );
+
+
+            if (horizontalPlatformSprite != null)
+            {
+                EditorGUILayout.PropertyField(
+                    horizontalPlatformSprite,
+                    new GUIContent(
+                        "Horizontal Sprite"
+                    )
+                );
+            }
+
+
+            if (verticalPlatformSprite != null)
+            {
+                EditorGUILayout.PropertyField(
+                    verticalPlatformSprite,
+                    new GUIContent(
+                        "Vertical Sprite"
+                    )
+                );
+            }
+
+
+            if (horizontalSpritesFaceRight != null)
+            {
+                EditorGUILayout.PropertyField(
+                    horizontalSpritesFaceRight,
+                    new GUIContent(
+                        "Horizontal Sprites Face Right"
+                    )
+                );
+            }
+
+
+            if (verticalSpritesFaceUp != null)
+            {
+                EditorGUILayout.PropertyField(
+                    verticalSpritesFaceUp,
+                    new GUIContent(
+                        "Vertical Sprites Face Up"
+                    )
+                );
+            }
+
+
+            if (directionChangeThreshold != null)
+            {
+                EditorGUILayout.PropertyField(
+                    directionChangeThreshold,
+                    new GUIContent(
+                        "Direction Change Threshold"
+                    )
+                );
+            }
+
+
+            EditorGUI.EndDisabledGroup();
+        }
+
+
+        EditorGUILayout.HelpBox(
+            "Assign one WHITE/base RIGHT-facing horizontal sprite and one " +
+            "WHITE/base UP-facing vertical sprite. Every starting or grown segment " +
+            "keeps its existing SpriteRenderer color tint. Left movement flips X " +
+            "and downward movement flips Y automatically.",
             MessageType.Info
         );
 
@@ -1957,6 +2278,9 @@ public class UniversalMovingPlatformEditor : Editor
                 EditorUtility.SetDirty(
                     point
                 );
+
+
+                platform.RefreshDirectionalSpritePreview();
             }
 
 

@@ -2,17 +2,26 @@ using UnityEngine;
 
 public class ColorPlatform : MonoBehaviour
 {
-    // =========================
+    // ==================================================
     // PLATFORM COLOR
-    // =========================
+    // ==================================================
 
-    public ColorManager.GameColor platformColor =
+    [Header("Platform Color")]
+
+    [SerializeField]
+    private ColorManager.GameColor platformColor =
         ColorManager.GameColor.Red;
 
 
-    // =========================
-    // INTERNAL VARIABLES
-    // =========================
+    public ColorManager.GameColor PlatformColor
+    {
+        get { return platformColor; }
+    }
+
+
+    // ==================================================
+    // REFERENCES
+    // ==================================================
 
     private ColorManager colorManager;
 
@@ -21,67 +30,64 @@ public class ColorPlatform : MonoBehaviour
     private SpriteRenderer[] spriteRenderers;
 
 
-    // =========================
+    // ==================================================
     // START
-    // =========================
+    // ==================================================
 
-    void Start()
+    private void Start()
     {
         FindColorManager();
 
         GetPlatformParts();
 
-        ApplyPlatformColor();
-
-        UpdateCollision();
+        UpdatePlatform();
     }
 
 
-    // =========================
-    // WHEN SCRIPT IS ENABLED
-    // =========================
+    // ==================================================
+    // ENABLE
+    // ==================================================
 
-    void OnEnable()
+    private void OnEnable()
     {
         FindColorManager();
 
         GetPlatformParts();
-
-        ApplyPlatformColor();
-
-        UpdateCollision();
     }
 
 
-    // =========================
+    // ==================================================
     // UPDATE
-    // =========================
+    // ==================================================
 
-    void Update()
+    private void Update()
     {
-        UpdateCollision();
+        UpdatePlatform();
     }
 
 
-    // =========================
+    // ==================================================
     // FIND COLOR MANAGER
-    // =========================
+    // ==================================================
 
-    void FindColorManager()
+    private void FindColorManager()
     {
-        if (colorManager == null)
+        if (colorManager != null)
         {
-            colorManager =
-                FindAnyObjectByType<ColorManager>();
+            return;
         }
+
+
+        colorManager =
+            FindFirstObjectByType<ColorManager>();
     }
 
 
-    // =========================
+    // ==================================================
     // GET PLATFORM PARTS
-    // =========================
+    // ==================================================
 
-    void GetPlatformParts()
+    private void GetPlatformParts()
     {
         platformColliders =
             GetComponentsInChildren<Collider2D>(
@@ -96,55 +102,106 @@ public class ColorPlatform : MonoBehaviour
     }
 
 
-    // =========================
-    // APPLY VISUAL COLOR
-    // =========================
+    // ==================================================
+    // UPDATE PLATFORM
+    // ==================================================
 
-    void ApplyPlatformColor()
+    private void UpdatePlatform()
     {
         if (colorManager == null)
         {
-            return;
+            FindColorManager();
+
+
+            if (colorManager == null)
+            {
+                return;
+            }
         }
 
 
-        Color chosenColor =
+        bool matchesBackground =
+            colorManager.ShouldPlatformBeHidden(
+                platformColor
+            );
+
+
+        ApplyPlatformColor(
+            matchesBackground
+        );
+
+
+        UpdateCollision(
+            matchesBackground
+        );
+    }
+
+
+    // ==================================================
+    // VISUAL
+    // ==================================================
+
+    private void ApplyPlatformColor(
+        bool matchesBackground
+    )
+    {
+        if (
+            spriteRenderers == null ||
+            spriteRenderers.Length == 0
+        )
+        {
+            GetPlatformParts();
+        }
+
+
+        Color platformTint =
             colorManager.GetUnityColor(
                 platformColor
             );
 
 
+        // IMPORTANT:
+        // Matching background = completely invisible.
+        //
+        // Non-matching = completely visible.
+        platformTint.a =
+            matchesBackground
+            ? 0f
+            : 1f;
+
+
         foreach (
-            SpriteRenderer sprite
+            SpriteRenderer spriteRenderer
             in spriteRenderers
         )
         {
-            sprite.color =
-                chosenColor;
+            if (spriteRenderer == null)
+            {
+                continue;
+            }
+
+
+            spriteRenderer.color =
+                platformTint;
         }
     }
 
 
-    // =========================
-    // COLOR COLLISION
-    // =========================
+    // ==================================================
+    // COLLISION
+    // ==================================================
 
-    void UpdateCollision()
+    private void UpdateCollision(
+        bool matchesBackground
+    )
     {
         if (
-            colorManager == null
-            ||
-            platformColliders == null
+            platformColliders == null ||
+            platformColliders.Length == 0
         )
         {
-            return;
+            GetPlatformParts();
         }
-
-
-        bool matchesBackground =
-            colorManager.currentColor
-            ==
-            platformColor;
 
 
         foreach (
@@ -152,53 +209,35 @@ public class ColorPlatform : MonoBehaviour
             in platformColliders
         )
         {
+            if (platformCollider == null)
+            {
+                continue;
+            }
+
+
             platformCollider.enabled =
                 !matchesBackground;
         }
     }
 
 
-    // =========================
-    // EDITOR COLOR PREVIEW
-    // =========================
+    // ==================================================
+    // EDITOR
+    // ==================================================
 
-    void OnValidate()
+    private void OnValidate()
     {
-        if (Application.isPlaying)
+        GetPlatformParts();
+
+
+        if (!Application.isPlaying)
         {
             return;
         }
 
 
-        ColorManager manager =
-            FindAnyObjectByType<ColorManager>();
+        FindColorManager();
 
-
-        if (manager == null)
-        {
-            return;
-        }
-
-
-        SpriteRenderer[] sprites =
-            GetComponentsInChildren<SpriteRenderer>(
-                true
-            );
-
-
-        Color chosenColor =
-            manager.GetUnityColor(
-                platformColor
-            );
-
-
-        foreach (
-            SpriteRenderer sprite
-            in sprites
-        )
-        {
-            sprite.color =
-                chosenColor;
-        }
+        UpdatePlatform();
     }
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -48,8 +49,6 @@ public class UniversalMovingPlatform : MonoBehaviour
         NewestFirst,
         Random
     }
-
-
     // ==================================================
     // BASIC SETUP
     // ==================================================
@@ -164,6 +163,97 @@ public class UniversalMovingPlatform : MonoBehaviour
 
     [SerializeField]
     private bool autoArrangeStartingSegments = true;
+
+
+    // ==================================================
+    // PLAYER INTERACTION
+    // ==================================================
+
+    [Header("Player Interaction")]
+
+    [Tooltip(
+        "Carry a player who is standing on top of the platform. " +
+        "Enabled by default."
+    )]
+    [SerializeField]
+    private bool carryPlayer = true;
+
+    [Tooltip(
+        "Allow the player to jump upward through the platform and land on top. " +
+        "The platform is also put on the ColorPlatform layer so the player's " +
+        "S + Right Click down dash can pass through it."
+    )]
+    [SerializeField]
+    private bool jumpThroughFromBelow = true;
+
+    [Tooltip(
+        "Layer used by PlayerMovement for one-way / down-dash platforms."
+    )]
+    [SerializeField]
+    private string oneWayPlatformLayerName = "ColorPlatform";
+
+    [Range(1f, 360f)]
+    [SerializeField]
+    private float oneWaySurfaceArc = 180f;
+
+
+    [Tooltip(
+        "If enabled, touching this moving platform resets the current level."
+    )]
+    [SerializeField]
+    private bool dangerousPlatform = false;
+
+    [Tooltip(
+        "Optional RIGHT-facing sprite used when Dangerous Platform is enabled. " +
+        "Leave blank to use the normal Horizontal Sprite."
+    )]
+    [SerializeField]
+    private Sprite dangerousHorizontalPlatformSprite;
+
+    [Tooltip(
+        "Optional UP-facing sprite used when Dangerous Platform is enabled. " +
+        "Leave blank to use the normal Vertical Sprite."
+    )]
+    [SerializeField]
+    private Sprite dangerousVerticalPlatformSprite;
+
+
+    // ==================================================
+    // DIRECTIONAL PLATFORM SPRITES
+    // ==================================================
+
+    [Header("Directional Platform Sprites")]
+
+    [Tooltip(
+        "Automatically switch every platform segment sprite based on the " +
+        "direction the platform is actually moving."
+    )]
+    [SerializeField]
+    private bool automaticDirectionalSprites = true;
+
+    [Tooltip(
+        "White/base sprite that faces RIGHT. Existing SpriteRenderer tint is preserved."
+    )]
+    [SerializeField]
+    private Sprite horizontalPlatformSprite;
+
+    [Tooltip(
+        "White/base sprite that faces UP. Existing SpriteRenderer tint is preserved."
+    )]
+    [SerializeField]
+    private Sprite verticalPlatformSprite;
+
+    [Tooltip("Enable if the horizontal source sprite faces right.")]
+    [SerializeField]
+    private bool horizontalSpritesFaceRight = true;
+
+    [Tooltip("Enable if the vertical source sprite faces up.")]
+    [SerializeField]
+    private bool verticalSpritesFaceUp = true;
+
+    [Min(0.00001f)]
+    [SerializeField]
+    private float directionChangeThreshold = 0.001f;
 
 
     // ==================================================
@@ -299,7 +389,17 @@ public class UniversalMovingPlatform : MonoBehaviour
     private bool movementStarted = false;
     private bool movementFinished = false;
 
+    private bool dangerTriggered = false;
+
     private float startDelayTimer = 0f;
+
+    private Vector2 lastPlatformMoveDelta = Vector2.zero;
+
+    private HashSet<Rigidbody2D> passengers =
+        new HashSet<Rigidbody2D>();
+
+    private HashSet<SpriteRenderer> directionalSpriteRenderers =
+        new HashSet<SpriteRenderer>();
 
 
     // ==================================================
@@ -415,6 +515,30 @@ public class UniversalMovingPlatform : MonoBehaviour
         get { return gridSize; }
     }
 
+    public bool IsMovementStarted
+    {
+        get { return movementStarted; }
+    }
+
+    public bool IsMovementFinished
+    {
+        get { return movementFinished; }
+    }
+
+    public bool IsCurrentlyMoving
+    {
+        get
+        {
+            return lastPlatformMoveDelta.sqrMagnitude >
+                directionChangeThreshold * directionChangeThreshold;
+        }
+    }
+
+    public Vector2 CurrentMovementDelta
+    {
+        get { return lastPlatformMoveDelta; }
+    }
+
 
     // ==================================================
     // RESET
@@ -452,6 +576,9 @@ public class UniversalMovingPlatform : MonoBehaviour
         {
             ArrangeStartingSegments();
         }
+
+
+        RefreshDirectionalSpritePreview();
     }
 
 
@@ -466,6 +593,12 @@ public class UniversalMovingPlatform : MonoBehaviour
 
 
         FindSetupObjects();
+
+        ConfigurePlatformInteraction();
+
+        RefreshDirectionalSpriteRenderers();
+
+        RefreshDirectionalSpritePreview();
     }
 
 
@@ -476,6 +609,8 @@ public class UniversalMovingPlatform : MonoBehaviour
     private void Start()
     {
         SetupMovement();
+
+        RefreshDirectionalSpritePreview();
 
 
         if (
@@ -494,6 +629,10 @@ public class UniversalMovingPlatform : MonoBehaviour
 
     private void FixedUpdate()
     {
+        lastPlatformMoveDelta =
+            Vector2.zero;
+
+
         if (
             !movementStarted ||
             movementFinished
@@ -625,7 +764,17 @@ public class UniversalMovingPlatform : MonoBehaviour
         Collision2D collision
     )
     {
+        if (TryKillPlayerOnContact(collision))
+        {
+            return;
+        }
+
+
         TryStartFromPlayer(
+            collision
+        );
+
+        TryRegisterPassenger(
             collision
         );
     }
@@ -635,7 +784,27 @@ public class UniversalMovingPlatform : MonoBehaviour
         Collision2D collision
     )
     {
+        if (TryKillPlayerOnContact(collision))
+        {
+            return;
+        }
+
+
         TryStartFromPlayer(
+            collision
+        );
+
+        TryRegisterPassenger(
+            collision
+        );
+    }
+
+
+    private void OnCollisionExit2D(
+        Collision2D collision
+    )
+    {
+        RemovePassenger(
             collision
         );
     }
@@ -674,6 +843,730 @@ public class UniversalMovingPlatform : MonoBehaviour
         {
             BeginMovement();
         }
+    }
+
+
+    // ==================================================
+    // PASSENGER CARRY
+    // ==================================================
+
+    private void TryRegisterPassenger(
+        Collision2D collision
+    )
+    {
+        PlayerMovement player =
+            collision.gameObject
+            .GetComponentInParent<PlayerMovement>();
+
+
+        if (player == null)
+        {
+            return;
+        }
+
+
+        // Only treat the player as supported when
+        // they are above the platform.
+        if (
+            player.transform.position.y <=
+            transform.position.y
+        )
+        {
+            return;
+        }
+
+
+        // Keep PlayerMovement grounded while the
+        // platform itself is carrying the player upward.
+        // This prevents a false jump animation.
+        player.RefreshMovingPlatformGrounding(
+            GetPlatformVerticalSpeed()
+        );
+
+
+        if (!carryPlayer)
+        {
+            return;
+        }
+
+
+        Rigidbody2D playerBody =
+            player.GetComponent<Rigidbody2D>();
+
+
+        if (playerBody != null)
+        {
+            passengers.Add(
+                playerBody
+            );
+        }
+    }
+
+
+    private void RemovePassenger(
+        Collision2D collision
+    )
+    {
+        PlayerMovement player =
+            collision.gameObject
+            .GetComponentInParent<PlayerMovement>();
+
+
+        if (player == null)
+        {
+            return;
+        }
+
+
+        Rigidbody2D playerBody =
+            player.GetComponent<Rigidbody2D>();
+
+
+        if (playerBody != null)
+        {
+            passengers.Remove(
+                playerBody
+            );
+        }
+    }
+
+
+    private void CarryPassengers(
+        Vector2 movementDelta
+    )
+    {
+        if (!carryPlayer)
+        {
+            return;
+        }
+
+
+        // IMPORTANT:
+        // Only manually carry the player horizontally.
+        //
+        // Vertical movement is left to normal 2D collision
+        // so an upward-moving platform pushes the player
+        // naturally instead of both physics AND this script
+        // trying to move the player upward at the same time.
+        //
+        // That double movement was the source of the jitter.
+        float horizontalDelta =
+            movementDelta.x;
+
+
+        if (
+            Mathf.Abs(horizontalDelta) <=
+            directionChangeThreshold
+        )
+        {
+            return;
+        }
+
+
+        passengers.RemoveWhere(
+            passenger =>
+            passenger == null
+        );
+
+
+        foreach (
+            Rigidbody2D passenger
+            in passengers
+        )
+        {
+            if (passenger == null)
+            {
+                continue;
+            }
+
+
+            Vector2 savedVelocity =
+                passenger.linearVelocity;
+
+
+            passenger.position =
+                new Vector2(
+                    passenger.position.x +
+                    horizontalDelta,
+
+                    passenger.position.y
+                );
+
+
+            // Preserve the player's own movement.
+            passenger.linearVelocity =
+                savedVelocity;
+        }
+    }
+
+
+    // ==================================================
+    // DANGEROUS PLATFORM
+    // ==================================================
+
+    private bool TryKillPlayerOnContact(
+        Collision2D collision
+    )
+    {
+        if (
+            !dangerousPlatform ||
+            dangerTriggered
+        )
+        {
+            return false;
+        }
+
+
+        PlayerMovement player =
+            collision.gameObject
+            .GetComponentInParent<PlayerMovement>();
+
+
+        if (player == null)
+        {
+            return false;
+        }
+
+
+        dangerTriggered = true;
+
+
+        Rigidbody2D playerBody =
+            player.GetComponent<Rigidbody2D>();
+
+
+        if (playerBody != null)
+        {
+            playerBody.linearVelocity =
+                Vector2.zero;
+        }
+
+
+        Time.timeScale = 1f;
+
+
+        SceneManager.LoadScene(
+            SceneManager.GetActiveScene().buildIndex
+        );
+
+
+        return true;
+    }
+
+
+    private float GetPlatformVerticalSpeed()
+    {
+        if (Time.fixedDeltaTime <= 0f)
+        {
+            return 0f;
+        }
+
+
+        return
+            lastPlatformMoveDelta.y /
+            Time.fixedDeltaTime;
+    }
+
+
+    // ==================================================
+    // ONE-WAY PLATFORM SETUP
+    // ==================================================
+
+    private void ConfigurePlatformInteraction()
+    {
+        if (startingSegmentsParent == null)
+        {
+            return;
+        }
+
+
+        for (
+            int i = 0;
+            i < startingSegmentsParent.childCount;
+            i++
+        )
+        {
+            ConfigureSegmentInteraction(
+                startingSegmentsParent.GetChild(i)
+            );
+        }
+    }
+
+
+    private void ConfigureSegmentInteraction(
+        Transform segment
+    )
+    {
+        if (segment == null)
+        {
+            return;
+        }
+
+
+        Collider2D[] colliders =
+            segment.GetComponentsInChildren<Collider2D>(
+                true
+            );
+
+
+        int oneWayLayer =
+            LayerMask.NameToLayer(
+                oneWayPlatformLayerName
+            );
+
+
+        foreach (
+            Collider2D platformCollider
+            in colliders
+        )
+        {
+            if (
+                platformCollider == null ||
+                platformCollider.isTrigger
+            )
+            {
+                continue;
+            }
+
+
+            if (!jumpThroughFromBelow)
+            {
+                platformCollider.usedByEffector =
+                    false;
+
+                continue;
+            }
+
+
+            if (oneWayLayer >= 0)
+            {
+                platformCollider.gameObject.layer =
+                    oneWayLayer;
+            }
+
+
+            PlatformEffector2D effector =
+                platformCollider.GetComponent<PlatformEffector2D>();
+
+
+            if (effector == null)
+            {
+                effector =
+                    platformCollider.gameObject
+                    .AddComponent<PlatformEffector2D>();
+            }
+
+
+            effector.useOneWay =
+                true;
+
+            effector.useOneWayGrouping =
+                true;
+
+            effector.surfaceArc =
+                oneWaySurfaceArc;
+
+            effector.rotationalOffset =
+                0f;
+
+
+            platformCollider.usedByEffector =
+                true;
+        }
+    }
+
+
+    // ==================================================
+    // DIRECTIONAL SPRITES
+    // ==================================================
+
+    private void RefreshDirectionalSpriteRenderers()
+    {
+        directionalSpriteRenderers.Clear();
+
+
+        if (startingSegmentsParent == null)
+        {
+            return;
+        }
+
+
+        RegisterDirectionalSpriteRenderers(
+            startingSegmentsParent
+        );
+    }
+
+
+    private void RegisterDirectionalSpriteRenderers(
+        Transform root
+    )
+    {
+        if (root == null)
+        {
+            return;
+        }
+
+
+        SpriteRenderer[] renderers =
+            root.GetComponentsInChildren<SpriteRenderer>(
+                true
+            );
+
+
+        foreach (
+            SpriteRenderer spriteRenderer
+            in renderers
+        )
+        {
+            if (spriteRenderer == null)
+            {
+                continue;
+            }
+
+
+            directionalSpriteRenderers.Add(
+                spriteRenderer
+            );
+        }
+    }
+
+
+    public void RefreshDirectionalSpritePreview()
+    {
+        if (!automaticDirectionalSprites)
+        {
+            return;
+        }
+
+
+        RefreshDirectionalSpriteRenderers();
+
+
+        Vector2 previewDirection =
+            GetUpcomingMovementDirection();
+
+
+        if (
+            previewDirection.sqrMagnitude >
+            directionChangeThreshold *
+            directionChangeThreshold
+        )
+        {
+            UpdateDirectionalSprites(
+                previewDirection
+            );
+        }
+    }
+
+
+    private Vector2 GetUpcomingMovementDirection()
+    {
+        if (
+            movementPointsParent == null ||
+            movementPointsParent.childCount == 0
+        )
+        {
+            return Vector2.zero;
+        }
+
+
+        // Ferris wheel:
+        // preview the tangent direction at the current
+        // position around the pivot.
+        if (
+            movementType ==
+            MovementType.FerrisWheel
+        )
+        {
+            Vector2 pivot =
+                movementPointsParent
+                .GetChild(0)
+                .position;
+
+
+            Vector2 radius =
+                (Vector2)transform.position -
+                pivot;
+
+
+            if (radius.sqrMagnitude <= 0.0001f)
+            {
+                return Vector2.zero;
+            }
+
+
+            Vector2 tangent =
+                clockwise
+                ? new Vector2(
+                    radius.y,
+                    -radius.x
+                )
+                : new Vector2(
+                    -radius.y,
+                    radius.x
+                );
+
+
+            return tangent.normalized;
+        }
+
+
+        if (movementPointsParent.childCount < 2)
+        {
+            return Vector2.zero;
+        }
+
+
+        int count =
+            movementPointsParent.childCount;
+
+
+        int direction =
+            startMovingForward
+            ? 1
+            : -1;
+
+
+        if (Application.isPlaying)
+        {
+            if (
+                targetPointIndex >= 0 &&
+                targetPointIndex < count
+            )
+            {
+                Vector2 target =
+                    movementPointsParent
+                    .GetChild(targetPointIndex)
+                    .position;
+
+
+                return
+                    target -
+                    (Vector2)transform.position;
+            }
+        }
+
+
+        // Edit-mode / before-play preview.
+        int startIndex =
+            direction > 0
+            ? 0
+            : count - 1;
+
+
+        int nextIndex =
+            startIndex +
+            direction;
+
+
+        if (
+            nextIndex < 0 ||
+            nextIndex >= count
+        )
+        {
+            return Vector2.zero;
+        }
+
+
+        Vector2 start =
+            movementPointsParent
+            .GetChild(startIndex)
+            .position;
+
+
+        Vector2 next =
+            movementPointsParent
+            .GetChild(nextIndex)
+            .position;
+
+
+        return next - start;
+    }
+
+
+    private void UpdateDirectionalSprites(
+        Vector2 movementDelta
+    )
+    {
+        if (!automaticDirectionalSprites)
+        {
+            return;
+        }
+
+
+        if (
+            movementDelta.sqrMagnitude <=
+            directionChangeThreshold *
+            directionChangeThreshold
+        )
+        {
+            return;
+        }
+
+
+        if (directionalSpriteRenderers.Count == 0)
+        {
+            RefreshDirectionalSpriteRenderers();
+        }
+
+
+        bool horizontalMovement =
+            Mathf.Abs(movementDelta.x) >=
+            Mathf.Abs(movementDelta.y);
+
+
+        List<SpriteRenderer> missingRenderers =
+            null;
+
+
+        foreach (
+            SpriteRenderer spriteRenderer
+            in directionalSpriteRenderers
+        )
+        {
+            if (spriteRenderer == null)
+            {
+                if (missingRenderers == null)
+                {
+                    missingRenderers =
+                        new List<SpriteRenderer>();
+                }
+
+
+                missingRenderers.Add(
+                    spriteRenderer
+                );
+
+                continue;
+            }
+
+
+            // IMPORTANT:
+            // We only replace the Sprite itself.
+            // SpriteRenderer.color is never changed,
+            // so Yellow / Blue / Red tint stays intact.
+            if (horizontalMovement)
+            {
+                Sprite horizontalSpriteToUse =
+                    dangerousPlatform &&
+                    dangerousHorizontalPlatformSprite != null
+                    ? dangerousHorizontalPlatformSprite
+                    : horizontalPlatformSprite;
+
+
+                if (horizontalSpriteToUse != null)
+                {
+                    spriteRenderer.sprite =
+                        horizontalSpriteToUse;
+                }
+
+
+                bool movingLeft =
+                    movementDelta.x < 0f;
+
+
+                spriteRenderer.flipX =
+                    horizontalSpritesFaceRight
+                    ? movingLeft
+                    : !movingLeft;
+
+
+                spriteRenderer.flipY =
+                    false;
+            }
+
+            else
+            {
+                Sprite verticalSpriteToUse =
+                    dangerousPlatform &&
+                    dangerousVerticalPlatformSprite != null
+                    ? dangerousVerticalPlatformSprite
+                    : verticalPlatformSprite;
+
+
+                Sprite horizontalFallbackSprite =
+                    dangerousPlatform &&
+                    dangerousHorizontalPlatformSprite != null
+                    ? dangerousHorizontalPlatformSprite
+                    : horizontalPlatformSprite;
+
+
+                if (verticalSpriteToUse != null)
+                {
+                    spriteRenderer.sprite =
+                        verticalSpriteToUse;
+                }
+
+                else if (horizontalFallbackSprite != null)
+                {
+                    // Fallback if an Up sprite has not
+                    // been assigned yet.
+                    spriteRenderer.sprite =
+                        horizontalFallbackSprite;
+                }
+
+
+                bool movingDown =
+                    movementDelta.y < 0f;
+
+
+                spriteRenderer.flipY =
+                    verticalSpritesFaceUp
+                    ? movingDown
+                    : !movingDown;
+
+
+                spriteRenderer.flipX =
+                    false;
+            }
+        }
+
+
+        if (missingRenderers != null)
+        {
+            foreach (
+                SpriteRenderer missing
+                in missingRenderers
+            )
+            {
+                directionalSpriteRenderers.Remove(
+                    missing
+                );
+            }
+        }
+    }
+
+
+    // ==================================================
+    // MOVE PLATFORM
+    // ==================================================
+
+    private void MovePlatformTo(
+        Vector2 newPosition
+    )
+    {
+        Vector2 movementDelta =
+            newPosition -
+            rb.position;
+
+
+        lastPlatformMoveDelta =
+            movementDelta;
+
+
+        rb.MovePosition(
+            newPosition
+        );
+
+
+        CarryPassengers(
+            movementDelta
+        );
+
+
+        UpdateDirectionalSprites(
+            movementDelta
+        );
     }
 
 
@@ -834,7 +1727,7 @@ public class UniversalMovingPlatform : MonoBehaviour
             );
 
 
-        rb.MovePosition(
+        MovePlatformTo(
             newPosition
         );
 
@@ -889,6 +1782,14 @@ public class UniversalMovingPlatform : MonoBehaviour
                 targetPointIndex
             )
             .position;
+
+
+        // Switch to the correct sprite BEFORE
+        // this path section starts moving.
+        UpdateDirectionalSprites(
+            segmentTargetPosition -
+            segmentStartPosition
+        );
 
 
         float distance =
@@ -950,6 +1851,9 @@ public class UniversalMovingPlatform : MonoBehaviour
 
         if (!movementFinished)
         {
+            RefreshDirectionalSpritePreview();
+
+
             waitTimer =
                 waitAtEachPoint;
         }
@@ -1233,7 +2137,7 @@ public class UniversalMovingPlatform : MonoBehaviour
             ferrisRadius;
 
 
-        rb.MovePosition(
+        MovePlatformTo(
             (Vector2)pivot.position +
             offset
         );
@@ -1253,6 +2157,16 @@ public class UniversalMovingPlatform : MonoBehaviour
                 ferrisAccumulatedRotation
             );
         }
+    }
+
+
+    // ==================================================
+    // CLEANUP
+    // ==================================================
+
+    private void OnDisable()
+    {
+        passengers.Clear();
     }
 
 
@@ -1515,6 +2429,14 @@ public class UniversalMovingPlatform : MonoBehaviour
         )
         {
             addedGrowthSegments.Add(
+                segment
+            );
+
+            ConfigureSegmentInteraction(
+                segment
+            );
+
+            RegisterDirectionalSpriteRenderers(
                 segment
             );
         }

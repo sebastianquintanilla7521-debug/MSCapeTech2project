@@ -5,17 +5,22 @@ using System.Collections;
 public class LevelExit : MonoBehaviour
 {
     // ==================================================
-    // SETTINGS
+    // TRANSITION
     // ==================================================
 
     [Header("Level Transition")]
 
-    [Tooltip(
-        "How long to wait before loading the next level."
-    )]
     [Min(0f)]
     [SerializeField]
     private float transitionDelay = 0.15f;
+
+
+    [Tooltip(
+        "Leave this empty to load the next scene normally. " +
+        "Enter a scene name to load a specific scene instead."
+    )]
+    [SerializeField]
+    private string targetSceneName = "";
 
 
     // ==================================================
@@ -52,7 +57,6 @@ public class LevelExit : MonoBehaviour
         levelCompleted = true;
 
 
-        // Stop player input immediately.
         player.enabled = false;
 
 
@@ -68,16 +72,16 @@ public class LevelExit : MonoBehaviour
 
 
         StartCoroutine(
-            LoadNextLevel()
+            LoadDestination()
         );
     }
 
 
     // ==================================================
-    // LOAD NEXT LEVEL
+    // LOAD DESTINATION
     // ==================================================
 
-    private IEnumerator LoadNextLevel()
+    private IEnumerator LoadDestination()
     {
         if (transitionDelay > 0f)
         {
@@ -87,32 +91,52 @@ public class LevelExit : MonoBehaviour
         }
 
 
-        Scene currentScene =
-            SceneManager.GetActiveScene();
+        Time.timeScale = 1f;
+
+
+        // --------------------------------------------------
+        // SPECIFIC SCENE
+        // --------------------------------------------------
+
+        if (
+            !string.IsNullOrWhiteSpace(
+                targetSceneName
+            )
+        )
+        {
+            SceneManager.LoadScene(
+                targetSceneName
+            );
+
+            yield break;
+        }
+
+
+        // --------------------------------------------------
+        // NEXT SCENE
+        // --------------------------------------------------
+
+        int currentSceneIndex =
+            SceneManager
+            .GetActiveScene()
+            .buildIndex;
 
 
         int nextSceneIndex =
-            currentScene.buildIndex + 1;
+            currentSceneIndex + 1;
 
 
-        // Make sure another scene actually exists.
         if (
             nextSceneIndex >=
             SceneManager.sceneCountInBuildSettings
         )
         {
             Debug.LogWarning(
-                "LevelExit: There is no next scene after " +
-                currentScene.name +
-                "."
+                "LevelExit: There is no next scene."
             );
-
 
             yield break;
         }
-
-
-        Time.timeScale = 1f;
 
 
         SceneManager.LoadScene(

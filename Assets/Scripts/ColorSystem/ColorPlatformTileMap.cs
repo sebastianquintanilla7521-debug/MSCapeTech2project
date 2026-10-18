@@ -3,15 +3,15 @@ using UnityEngine.Tilemaps;
 
 public class ColorPlatformTileMap : MonoBehaviour
 {
-    // =========================
+    // ==================================================
     // PLATFORM COLOR
-    // =========================
+    // ==================================================
 
     [Header("Platform Color")]
 
     [SerializeField]
     private ColorManager.GameColor platformColor =
-        ColorManager.GameColor.Blue;
+        ColorManager.GameColor.Red;
 
 
     public ColorManager.GameColor PlatformColor
@@ -20,9 +20,9 @@ public class ColorPlatformTileMap : MonoBehaviour
     }
 
 
-    // =========================
-    // INTERNAL
-    // =========================
+    // ==================================================
+    // REFERENCES
+    // ==================================================
 
     private ColorManager colorManager;
 
@@ -31,97 +31,182 @@ public class ColorPlatformTileMap : MonoBehaviour
     private Collider2D[] tilemapColliders;
 
 
-    // =========================
+    // ==================================================
     // START
-    // =========================
+    // ==================================================
 
     private void Start()
     {
-        colorManager =
-            FindAnyObjectByType<ColorManager>();
+        Setup();
 
-
-        tilemap =
-            GetComponent<Tilemap>();
-
-
-        tilemapColliders =
-            GetComponents<Collider2D>();
-
-
-        ApplyColor();
-
-        UpdateCollision();
+        UpdatePlatform();
     }
 
 
-    // =========================
+    // ==================================================
+    // ENABLE
+    // ==================================================
+
+    private void OnEnable()
+    {
+        Setup();
+    }
+
+
+    // ==================================================
     // UPDATE
-    // =========================
+    // ==================================================
 
     private void Update()
     {
-        UpdateCollision();
+        UpdatePlatform();
     }
 
 
-    // =========================
-    // APPLY COLOR
-    // =========================
+    // ==================================================
+    // SETUP
+    // ==================================================
 
-    private void ApplyColor()
+    private void Setup()
     {
-        if (
-            colorManager == null ||
-            tilemap == null
-        )
+        if (tilemap == null)
         {
-            return;
+            tilemap =
+                GetComponent<Tilemap>();
         }
 
 
-        Color chosenColor =
+        if (
+            tilemapColliders == null ||
+            tilemapColliders.Length == 0
+        )
+        {
+            tilemapColliders =
+                GetComponents<Collider2D>();
+        }
+
+
+        if (colorManager == null)
+        {
+            colorManager =
+                FindAnyObjectByType<ColorManager>();
+        }
+    }
+
+
+    // ==================================================
+    // UPDATE PLATFORM
+    // ==================================================
+
+    private void UpdatePlatform()
+    {
+        if (
+            tilemap == null ||
+            colorManager == null
+        )
+        {
+            Setup();
+
+
+            if (
+                tilemap == null ||
+                colorManager == null
+            )
+            {
+                return;
+            }
+        }
+
+
+        bool matchesBackground =
+            colorManager.ShouldPlatformBeHidden(
+                platformColor
+            );
+
+
+        ApplyColor(
+            matchesBackground
+        );
+
+
+        UpdateCollision(
+            matchesBackground
+        );
+    }
+
+
+    // ==================================================
+    // VISUAL
+    // ==================================================
+
+    private void ApplyColor(
+        bool matchesBackground
+    )
+    {
+        Color platformTint =
             colorManager.GetUnityColor(
                 platformColor
             );
 
 
-        chosenColor.a = 1f;
+        // Completely hide the Tilemap when
+        // it matches the background.
+        platformTint.a =
+            matchesBackground
+            ? 0f
+            : 1f;
 
 
         tilemap.color =
-            chosenColor;
+            platformTint;
     }
 
 
-    // =========================
-    // COLOR COLLISION
-    // =========================
+    // ==================================================
+    // COLLISION
+    // ==================================================
 
-    private void UpdateCollision()
+    private void UpdateCollision(
+        bool matchesBackground
+    )
     {
-        if (
-            colorManager == null ||
-            tilemapColliders == null
-        )
+        if (tilemapColliders == null)
         {
             return;
         }
 
 
-        bool matchesBackground =
-            colorManager.currentColor
-            ==
-            platformColor;
-
-
         foreach (
-            Collider2D tileCollider
+            Collider2D tilemapCollider
             in tilemapColliders
         )
         {
-            tileCollider.enabled =
+            if (tilemapCollider == null)
+            {
+                continue;
+            }
+
+
+            tilemapCollider.enabled =
                 !matchesBackground;
         }
+    }
+
+
+    // ==================================================
+    // EDITOR
+    // ==================================================
+
+    private void OnValidate()
+    {
+        if (!Application.isPlaying)
+        {
+            return;
+        }
+
+
+        Setup();
+
+        UpdatePlatform();
     }
 }
