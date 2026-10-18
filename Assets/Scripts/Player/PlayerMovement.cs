@@ -226,6 +226,7 @@ public class PlayerMovement : MonoBehaviour
             );
 
             jumpsRemaining--;
+            GameAudio.Instance?.PlayJump();
 
             movingPlatformGroundedUntil =
                 -999f;
@@ -598,6 +599,7 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator GroundDash()
     {
         dashCharges--;
+        GameAudio.Instance?.PlayDash();
 
         nextDashTime =
             Time.time + dashCooldown;
@@ -752,6 +754,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         dashCharges--;
+        GameAudio.Instance?.PlayDash();
 
 
         nextDashTime =
@@ -841,6 +844,7 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator AirDash()
     {
         dashCharges--;
+        GameAudio.Instance?.PlayDash();
 
         nextDashTime =
             Time.time + dashCooldown;

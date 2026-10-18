@@ -81,7 +81,7 @@ public class DangerTilemap : MonoBehaviour
         // using the delayed FailLevel sequence.
         if (levelResetManager != null)
         {
-            levelResetManager.ResetLevel();
+            levelResetManager.FailLevelImmediately();
         }
     }
 }

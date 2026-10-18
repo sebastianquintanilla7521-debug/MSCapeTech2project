@@ -42,7 +42,7 @@ public class LevelResetManager : MonoBehaviour
             Input.GetKeyDown(restartKey)
         )
         {
-            ResetLevel();
+            FailLevelImmediately();
         }
     }
 
@@ -60,6 +60,7 @@ public class LevelResetManager : MonoBehaviour
 
 
         isResetting = true;
+        GameAudio.Instance?.PlayDeath();
 
 
         StartCoroutine(
@@ -71,6 +72,19 @@ public class LevelResetManager : MonoBehaviour
     // ==================================================
     // FAIL DELAY
     // ==================================================
+
+    // Instant lethal reset, sharing the same guard as delayed deaths.
+    public void FailLevelImmediately()
+    {
+        if (isResetting)
+        {
+            return;
+        }
+
+        isResetting = true;
+        GameAudio.Instance?.PlayDeath();
+        ResetLevel();
+    }
 
     private IEnumerator FailSequence()
     {

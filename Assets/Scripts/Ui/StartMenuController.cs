@@ -47,6 +47,7 @@ public class StartMenuController : MonoBehaviour
 
     public void StartGame()
     {
+        GameAudio.Instance?.PlayUIClick();
         CheckpointSystem.ClearCheckpoint();
 
         SceneManager.LoadScene(
@@ -61,6 +62,7 @@ public class StartMenuController : MonoBehaviour
 
     public void OpenCredits()
     {
+        GameAudio.Instance?.PlayUIClick();
         SceneManager.LoadScene(
             creditsSceneName
         );
@@ -78,6 +80,8 @@ public class StartMenuController : MonoBehaviour
             return;
         }
 
+        GameAudio.Instance?.PlayUIClick();
+
         settingsPanel.alpha = 1f;
         settingsPanel.interactable = true;
         settingsPanel.blocksRaycasts = true;
@@ -90,6 +94,8 @@ public class StartMenuController : MonoBehaviour
         {
             return;
         }
+
+        GameAudio.Instance?.PlayUIClick();
 
         settingsPanel.alpha = 0f;
         settingsPanel.interactable = false;

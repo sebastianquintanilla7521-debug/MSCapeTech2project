@@ -940,6 +940,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5085532792680368918, guid: a083907f55ac40a4f80ae8d9477f9456, type: 3}
+      propertyPath: m_Size.x
+      value: 0.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085532792680368918, guid: a083907f55ac40a4f80ae8d9477f9456, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6291726068361174955, guid: a083907f55ac40a4f80ae8d9477f9456, type: 3}
       propertyPath: m_Interpolate
       value: 1
@@ -1425,9 +1433,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0.10810811
-    y: 0.06751149
+    y: 0.11144953
     width: 0.85
-    height: 0.80490917
+    height: 0.7231356
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -2292,6 +2300,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dc42686e1769dc41893a2223cac0790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColorManager
+--- !u!1 &1418868004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1418868006}
+  - component: {fileID: 1418868005}
+  m_Layer: 0
+  m_Name: GameAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1418868005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418868004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df532e5adc24f3a4cb13ccca01270ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameAudio
+  dashSfx: {fileID: 8300000, guid: 1b0981e8c8e00c54fa22d7ee3dfd4bf1, type: 3}
+  dashVolume: 1
+  jumpSfx: {fileID: 8300000, guid: d46ec9c91368cfa47b24f5e80fcdec88, type: 3}
+  jumpVolume: 1
+  uiClickSfx: {fileID: 8300000, guid: 5df5cca1e14394649acc0c8c7179b5b1, type: 3}
+  uiClickVolume: 1
+  deathSfx: {fileID: 8300000, guid: 2a8d7a2e0fbb35f42ac2fc35fad5ceff, type: 3}
+  deathVolume: 1
+--- !u!4 &1418868006
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418868004}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.06144, y: -0.5848, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1450143568
 GameObject:
   m_ObjectHideFlags: 0
@@ -63740,7 +63800,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: DesktopBackgroundCamera
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8643389177325453589, guid: aef5e9ffcbf7cb7408a08355bcbd12a2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -64006,3 +64067,4 @@ SceneRoots:
   - {fileID: 13569967}
   - {fileID: 2071362952}
   - {fileID: 2036220999}
+  - {fileID: 1418868006}

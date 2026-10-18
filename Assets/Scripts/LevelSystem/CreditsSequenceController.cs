@@ -164,6 +164,7 @@ public class CreditsSequenceController : MonoBehaviour
 
     public void ReturnToMenu()
     {
+        GameAudio.Instance?.PlayUIClick();
         CheckpointSystem.ClearCheckpoint();
 
 

@@ -74,6 +74,11 @@ public class TutorialPopupUI : MonoBehaviour
 
     public void HidePopup()
     {
+        if (isOpen)
+        {
+            GameAudio.Instance?.PlayUIClick();
+        }
+
         if (canvasGroup == null)
         {
             canvasGroup =
