@@ -1,0 +1,2301 @@
+fileFormatVersion: 2
+guid: ab5c91b2306e3da4a824db27ba75ec0f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7846950780230288081
+    second: Doublejumppopup_0
+  - first:
+      213: -2600787405525473300
+    second: Doublejumppopup_1
+  - first:
+      213: -6849078386742314328
+    second: Doublejumppopup_2
+  - first:
+      213: -8279770803934606825
+    second: Doublejumppopup_3
+  - first:
+      213: -4120846273450270840
+    second: Doublejumppopup_4
+  - first:
+      213: 222437879465403012
+    second: Doublejumppopup_5
+  - first:
+      213: -6422064366662194950
+    second: Doublejumppopup_6
+  - first:
+      213: -8724130398616643240
+    second: Doublejumppopup_7
+  - first:
+      213: -2342387867813805518
+    second: Doublejumppopup_8
+  - first:
+      213: -3608298918865044308
+    second: Doublejumppopup_9
+  - first:
+      213: -5361845492178530076
+    second: Doublejumppopup_10
+  - first:
+      213: -6688965722786177751
+    second: Doublejumppopup_11
+  - first:
+      213: 4812969159464120906
+    second: Doublejumppopup_12
+  - first:
+      213: -5059283874883394917
+    second: Doublejumppopup_13
+  - first:
+      213: 2497951458588255553
+    second: Doublejumppopup_14
+  - first:
+      213: -6317336382442220325
+    second: Doublejumppopup_15
+  - first:
+      213: 8640796061643604924
+    second: Doublejumppopup_16
+  - first:
+      213: 9128596887900807803
+    second: Doublejumppopup_17
+  - first:
+      213: -8392107462697022471
+    second: Doublejumppopup_18
+  - first:
+      213: 3997025624033254616
+    second: Doublejumppopup_19
+  - first:
+      213: -728091414870003134
+    second: Doublejumppopup_20
+  - first:
+      213: -3869578237108958327
+    second: Doublejumppopup_21
+  - first:
+      213: -3244637457097022461
+    second: Doublejumppopup_22
+  - first:
+      213: -4211720884532817784
+    second: Doublejumppopup_23
+  - first:
+      213: 7036820699528198694
+    second: Doublejumppopup_24
+  - first:
+      213: 303285279541055546
+    second: Doublejumppopup_25
+  - first:
+      213: 2790929881483006170
+    second: Doublejumppopup_26
+  - first:
+      213: 3707105714863667610
+    second: Doublejumppopup_27
+  - first:
+      213: 803755983702901475
+    second: Doublejumppopup_28
+  - first:
+      213: 4667294795269292165
+    second: Doublejumppopup_29
+  - first:
+      213: -6803165146342929442
+    second: Doublejumppopup_30
+  - first:
+      213: 243104719416312365
+    second: Doublejumppopup_31
+  - first:
+      213: -7952329065695559725
+    second: Doublejumppopup_32
+  - first:
+      213: -7207829372414371984
+    second: Doublejumppopup_33
+  - first:
+      213: -295746771330302927
+    second: Doublejumppopup_34
+  - first:
+      213: -3259593352157106678
+    second: Doublejumppopup_35
+  - first:
+      213: -3807066458274923927
+    second: Doublejumppopup_36
+  - first:
+      213: -4302350495427776564
+    second: Doublejumppopup_37
+  - first:
+      213: -4204855259331768085
+    second: Doublejumppopup_38
+  - first:
+      213: 5114740656656853637
+    second: Doublejumppopup_39
+  - first:
+      213: 8481113817708806873
+    second: Doublejumppopup_40
+  - first:
+      213: 1375606005484170413
+    second: Doublejumppopup_41
+  - first:
+      213: -6865251974394147150
+    second: Doublejumppopup_42
+  - first:
+      213: 8160119676618506540
+    second: Doublejumppopup_43
+  - first:
+      213: 5882011416193295469
+    second: Doublejumppopup_44
+  - first:
+      213: -963342718001128493
+    second: Doublejumppopup_45
+  - first:
+      213: -2005636474327327223
+    second: Doublejumppopup_46
+  - first:
+      213: -8803348127581358616
+    second: Doublejumppopup_47
+  - first:
+      213: 2495209410348966866
+    second: Doublejumppopup_48
+  - first:
+      213: -1723367008139312849
+    second: Doublejumppopup_49
+  - first:
+      213: 2728937555589177482
+    second: Doublejumppopup_50
+  - first:
+      213: -5120471220026385848
+    second: Doublejumppopup_51
+  - first:
+      213: -7755103906600639232
+    second: Doublejumppopup_52
+  - first:
+      213: -8460838052448084962
+    second: Doublejumppopup_53
+  - first:
+      213: 8213892789406349211
+    second: Doublejumppopup_54
+  - first:
+      213: 778931653240677450
+    second: Doublejumppopup_55
+  - first:
+      213: -1308727141853018826
+    second: Doublejumppopup_56
+  - first:
+      213: 2233680643696471095
+    second: Doublejumppopup_57
+  - first:
+      213: 5640226351852076588
+    second: Doublejumppopup_58
+  - first:
+      213: 3699757558091273135
+    second: Doublejumppopup_59
+  - first:
+      213: 7229350961323747638
+    second: Doublejumppopup_60
+  - first:
+      213: -5529541211909929112
+    second: Doublejumppopup_61
+  - first:
+      213: 5687290748604089292
+    second: Doublejumppopup_62
+  - first:
+      213: -4175022982027621189
+    second: Doublejumppopup_63
+  - first:
+      213: -282420034060043833
+    second: Doublejumppopup_64
+  - first:
+      213: -4924862905286849986
+    second: Doublejumppopup_65
+  - first:
+      213: 8819795896112878256
+    second: Doublejumppopup_66
+  - first:
+      213: 4112043942861044145
+    second: Doublejumppopup_67
+  - first:
+      213: -2071577314902932158
+    second: Doublejumppopup_68
+  - first:
+      213: 9219559633504266977
+    second: Doublejumppopup_69
+  - first:
+      213: -3281141254346063065
+    second: Doublejumppopup_70
+  - first:
+      213: 4287314459772984110
+    second: Doublejumppopup_71
+  - first:
+      213: -8299531696866420454
+    second: Doublejumppopup_72
+  - first:
+      213: -3798144915683965158
+    second: Doublejumppopup_73
+  - first:
+      213: -2894136962519984741
+    second: Doublejumppopup_74
+  - first:
+      213: 8594089313844154324
+    second: Doublejumppopup_75
+  - first:
+      213: 2447623854258682392
+    second: Doublejumppopup_76
+  - first:
+      213: -9110568266805476568
+    second: Doublejumppopup_77
+  - first:
+      213: -5684028816569821759
+    second: Doublejumppopup_78
+  - first:
+      213: -3867485568263146354
+    second: Doublejumppopup_79
+  - first:
+      213: -6373761484665996722
+    second: Doublejumppopup_80
+  - first:
+      213: -4887376471659601881
+    second: Doublejumppopup_81
+  - first:
+      213: 485635735849046377
+    second: Doublejumppopup_82
+  - first:
+      213: 4816177455578597589
+    second: Doublejumppopup_83
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 358
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Doublejumppopup_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 255
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2d366e17d70a1390800000000000000
+      internalID: -7846950780230288081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 222
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce7285d52a528ebd0800000000000000
+      internalID: -2600787405525473300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_2
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 232
+        width: 29
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aa3b67ce7f23f0a0800000000000000
+      internalID: -6849078386742314328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_3
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 232
+        width: 29
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71ac3d96258581d80800000000000000
+      internalID: -8279770803934606825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_4
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 230
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88f1101c520dfc6c0800000000000000
+      internalID: -4120846273450270840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_5
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 232
+        width: 21
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4826026a212461300800000000000000
+      internalID: 222437879465403012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_6
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 230
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af8e76ceb7e30e6a0800000000000000
+      internalID: -6422064366662194950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_7
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 229
+        width: 29
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8599448ff99ade680800000000000000
+      internalID: -8724130398616643240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_8
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 236
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23206cc05aa2e7fd0800000000000000
+      internalID: -2342387867813805518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_9
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 234
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cac7f99304fbcedc0800000000000000
+      internalID: -3608298918865044308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_10
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 228
+        width: 27
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e05b22eee5e695b0800000000000000
+      internalID: -5361845492178530076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_11
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 261
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92dd0926d150c23a0800000000000000
+      internalID: -6688965722786177751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_12
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 250
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a42f4c843f91bc240800000000000000
+      internalID: 4812969159464120906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 241
+        width: 34
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b92a6bbfe10d9c9b0800000000000000
+      internalID: -5059283874883394917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_14
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 233
+        width: 23
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 145625bed918aa220800000000000000
+      internalID: 2497951458588255553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_15
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 222
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd451e5e7005458a0800000000000000
+      internalID: -6317336382442220325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_16
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 195
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb38cd6bc364ae770800000000000000
+      internalID: 8640796061643604924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_17
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 199
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b726011118a4fae70800000000000000
+      internalID: 9128596887900807803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_18
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 199
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fb0a09d9be398b80800000000000000
+      internalID: -8392107462697022471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_19
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 201
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dcd2aeb0a9487730800000000000000
+      internalID: 3997025624033254616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_20
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 202
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24279ac37bc45e5f0800000000000000
+      internalID: -728091414870003134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_21
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 200
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98bc982681f7c4ac0800000000000000
+      internalID: -3869578237108958327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_22
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 199
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3042ec07c6bb8f2d0800000000000000
+      internalID: -3244637457097022461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_23
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 215
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 880d3509b26fc85c0800000000000000
+      internalID: -4211720884532817784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_24
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 206
+        width: 9
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62a7e7fb42fc7a160800000000000000
+      internalID: 7036820699528198694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_25
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 200
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3056a8da5c753400800000000000000
+      internalID: 303285279541055546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_26
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 199
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad051d2b0ff5bb620800000000000000
+      internalID: 2790929881483006170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_27
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 162
+        width: 26
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a99f44fa109427330800000000000000
+      internalID: 3707105714863667610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_28
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 200
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e2c4b60fc3872b00800000000000000
+      internalID: 803755983702901475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_29
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 201
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5804e0e43ef85c040800000000000000
+      internalID: 4667294795269292165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_30
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 198
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edb49e7185d4691a0800000000000000
+      internalID: -6803165146342929442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_31
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 202
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d22c70c447eaf5300800000000000000
+      internalID: 243104719416312365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_32
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 199
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dfb33619d6a3a190800000000000000
+      internalID: -7952329065695559725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_33
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 199
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0775d9fdf55a8fb90800000000000000
+      internalID: -7207829372414371984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_34
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 198
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13c736fd0eb45ebf0800000000000000
+      internalID: -295746771330302927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_35
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 186
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0e6374cd1993c2d0800000000000000
+      internalID: -3259593352157106678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_36
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 176
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96af7361a359a2bc0800000000000000
+      internalID: -3807066458274923927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_37
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 181
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccf2dcce40bfa44c0800000000000000
+      internalID: -4302350495427776564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_38
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 98
+        width: 62
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be0d89f7b6a55a5c0800000000000000
+      internalID: -4204855259331768085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_39
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 175
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58aa74637853bf640800000000000000
+      internalID: 5114740656656853637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_40
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 173
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d2c0341518f2b570800000000000000
+      internalID: 8481113817708806873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_41
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 159
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dac27cbaf52271310800000000000000
+      internalID: 1375606005484170413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_42
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 160
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2be00b4f3b9b9b0a0800000000000000
+      internalID: -6865251974394147150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_43
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 151
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2185899c919e3170800000000000000
+      internalID: 8160119676618506540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_44
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 156
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d646ef2083a11a150800000000000000
+      internalID: 5882011416193295469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_45
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 154
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3db5598e6e481a2f0800000000000000
+      internalID: -963342718001128493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_46
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 151
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90e172fb04c8a24e0800000000000000
+      internalID: -2005636474327327223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_47
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 147
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e5b965258934d580800000000000000
+      internalID: -8803348127581358616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_48
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 148
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d3ef001db3c0a220800000000000000
+      internalID: 2495209410348966866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_49
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 137
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f218a3e36de5518e0800000000000000
+      internalID: -1723367008139312849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_50
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 147
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a80ad1f8f322fd520800000000000000
+      internalID: 2728937555589177482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_51
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 70
+        width: 89
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84a57b70e8e60f8b0800000000000000
+      internalID: -5120471220026385848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_52
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 108
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00523d2d516506490800000000000000
+      internalID: -7755103906600639232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_53
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 111
+        width: 31
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1c59b56e90159a80800000000000000
+      internalID: -8460838052448084962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_54
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 98
+        width: 37
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9735bf09fb9df170800000000000000
+      internalID: 8213892789406349211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_55
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 99
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a44e7bf26325fca00800000000000000
+      internalID: 778931653240677450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_56
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 34
+        width: 132
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63540f1399776dde0800000000000000
+      internalID: -1308727141853018826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_57
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 21
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73ca13df5b0affe10800000000000000
+      internalID: 2233680643696471095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_58
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 36
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2eb0fadbfb164e40800000000000000
+      internalID: 5640226351852076588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_59
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 31
+        width: 138
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa3d81d95ed285330800000000000000
+      internalID: 3699757558091273135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_60
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 20
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 639a4568560d35460800000000000000
+      internalID: 7229350961323747638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_61
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 21
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 867c935809f1343b0800000000000000
+      internalID: -5529541211909929112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_62
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 15
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc389e4adc05dee40800000000000000
+      internalID: 5687290748604089292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_63
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 19
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbcc623d7b65f06c0800000000000000
+      internalID: -4175022982027621189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_64
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 20
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c9b560b974a41cf0800000000000000
+      internalID: -282420034060043833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_65
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 20
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3a01ead74f57abb0800000000000000
+      internalID: -4924862905286849986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_66
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 0
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b2914363a5366a70800000000000000
+      internalID: 8819795896112878256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_67
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 2
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b97703fd2ae01930800000000000000
+      internalID: 4112043942861044145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_68
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 2
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 245047468674043e0800000000000000
+      internalID: -2071577314902932158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_69
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 0
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ea6d8ca3a472ff70800000000000000
+      internalID: 9219559633504266977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_70
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 4
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 723c2d4d96b0772d0800000000000000
+      internalID: -3281141254346063065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_71
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 1
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2b1a2739c99f7b30800000000000000
+      internalID: 4287314459772984110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_72
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 5
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a199e2ef4e322dc80800000000000000
+      internalID: -8299531696866420454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_73
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 3
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a17833792574a4bc0800000000000000
+      internalID: -3798144915683965158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_74
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 12
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b951ba134c5f5d7d0800000000000000
+      internalID: -2894136962519984741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_75
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 4
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4df49af82b6544770800000000000000
+      internalID: 8594089313844154324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_76
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 4
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81a7cd86de4b7f120800000000000000
+      internalID: 2447623854258682392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_77
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 4
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8230d136e62c09180800000000000000
+      internalID: -9110568266805476568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_78
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 3
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c5954718e54e11b0800000000000000
+      internalID: -5684028816569821759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_79
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 2
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e84b9b1dd5ee35ac0800000000000000
+      internalID: -3867485568263146354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_80
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 2
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4aba6703b9db87a0800000000000000
+      internalID: -6373761484665996722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_81
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 13
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 720a0235efc8c2cb0800000000000000
+      internalID: -4887376471659601881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_82
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 3
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9619485f0235db600800000000000000
+      internalID: 485635735849046377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doublejumppopup_83
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 2
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d8c10fe0ef76d240800000000000000
+      internalID: 4816177455578597589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Doublejumppopup_0: -7846950780230288081
+      Doublejumppopup_1: -2600787405525473300
+      Doublejumppopup_10: -5361845492178530076
+      Doublejumppopup_11: -6688965722786177751
+      Doublejumppopup_12: 4812969159464120906
+      Doublejumppopup_13: -5059283874883394917
+      Doublejumppopup_14: 2497951458588255553
+      Doublejumppopup_15: -6317336382442220325
+      Doublejumppopup_16: 8640796061643604924
+      Doublejumppopup_17: 9128596887900807803
+      Doublejumppopup_18: -8392107462697022471
+      Doublejumppopup_19: 3997025624033254616
+      Doublejumppopup_2: -6849078386742314328
+      Doublejumppopup_20: -728091414870003134
+      Doublejumppopup_21: -3869578237108958327
+      Doublejumppopup_22: -3244637457097022461
+      Doublejumppopup_23: -4211720884532817784
+      Doublejumppopup_24: 7036820699528198694
+      Doublejumppopup_25: 303285279541055546
+      Doublejumppopup_26: 2790929881483006170
+      Doublejumppopup_27: 3707105714863667610
+      Doublejumppopup_28: 803755983702901475
+      Doublejumppopup_29: 4667294795269292165
+      Doublejumppopup_3: -8279770803934606825
+      Doublejumppopup_30: -6803165146342929442
+      Doublejumppopup_31: 243104719416312365
+      Doublejumppopup_32: -7952329065695559725
+      Doublejumppopup_33: -7207829372414371984
+      Doublejumppopup_34: -295746771330302927
+      Doublejumppopup_35: -3259593352157106678
+      Doublejumppopup_36: -3807066458274923927
+      Doublejumppopup_37: -4302350495427776564
+      Doublejumppopup_38: -4204855259331768085
+      Doublejumppopup_39: 5114740656656853637
+      Doublejumppopup_4: -4120846273450270840
+      Doublejumppopup_40: 8481113817708806873
+      Doublejumppopup_41: 1375606005484170413
+      Doublejumppopup_42: -6865251974394147150
+      Doublejumppopup_43: 8160119676618506540
+      Doublejumppopup_44: 5882011416193295469
+      Doublejumppopup_45: -963342718001128493
+      Doublejumppopup_46: -2005636474327327223
+      Doublejumppopup_47: -8803348127581358616
+      Doublejumppopup_48: 2495209410348966866
+      Doublejumppopup_49: -1723367008139312849
+      Doublejumppopup_5: 222437879465403012
+      Doublejumppopup_50: 2728937555589177482
+      Doublejumppopup_51: -5120471220026385848
+      Doublejumppopup_52: -7755103906600639232
+      Doublejumppopup_53: -8460838052448084962
+      Doublejumppopup_54: 8213892789406349211
+      Doublejumppopup_55: 778931653240677450
+      Doublejumppopup_56: -1308727141853018826
+      Doublejumppopup_57: 2233680643696471095
+      Doublejumppopup_58: 5640226351852076588
+      Doublejumppopup_59: 3699757558091273135
+      Doublejumppopup_6: -6422064366662194950
+      Doublejumppopup_60: 7229350961323747638
+      Doublejumppopup_61: -5529541211909929112
+      Doublejumppopup_62: 5687290748604089292
+      Doublejumppopup_63: -4175022982027621189
+      Doublejumppopup_64: -282420034060043833
+      Doublejumppopup_65: -4924862905286849986
+      Doublejumppopup_66: 8819795896112878256
+      Doublejumppopup_67: 4112043942861044145
+      Doublejumppopup_68: -2071577314902932158
+      Doublejumppopup_69: 9219559633504266977
+      Doublejumppopup_7: -8724130398616643240
+      Doublejumppopup_70: -3281141254346063065
+      Doublejumppopup_71: 4287314459772984110
+      Doublejumppopup_72: -8299531696866420454
+      Doublejumppopup_73: -3798144915683965158
+      Doublejumppopup_74: -2894136962519984741
+      Doublejumppopup_75: 8594089313844154324
+      Doublejumppopup_76: 2447623854258682392
+      Doublejumppopup_77: -9110568266805476568
+      Doublejumppopup_78: -5684028816569821759
+      Doublejumppopup_79: -3867485568263146354
+      Doublejumppopup_8: -2342387867813805518
+      Doublejumppopup_80: -6373761484665996722
+      Doublejumppopup_81: -4887376471659601881
+      Doublejumppopup_82: 485635735849046377
+      Doublejumppopup_83: 4816177455578597589
+      Doublejumppopup_9: -3608298918865044308
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

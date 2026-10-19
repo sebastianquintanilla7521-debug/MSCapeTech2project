@@ -1,0 +1,2171 @@
+fileFormatVersion: 2
+guid: 722567d5566057a4889b85ce84289238
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3093405410596614400
+    second: Dash_prompt_0
+  - first:
+      213: -819206706604539301
+    second: Dash_prompt_1
+  - first:
+      213: -7073055036083027598
+    second: Dash_prompt_2
+  - first:
+      213: -7632784129999357919
+    second: Dash_prompt_3
+  - first:
+      213: 1370836750992814839
+    second: Dash_prompt_4
+  - first:
+      213: 3584520168608789660
+    second: Dash_prompt_5
+  - first:
+      213: 3451684200010958798
+    second: Dash_prompt_6
+  - first:
+      213: 6112818932988039872
+    second: Dash_prompt_7
+  - first:
+      213: 2374875374870607556
+    second: Dash_prompt_8
+  - first:
+      213: 3586144063201938147
+    second: Dash_prompt_9
+  - first:
+      213: -6066504543493596797
+    second: Dash_prompt_10
+  - first:
+      213: -5713812274126470585
+    second: Dash_prompt_11
+  - first:
+      213: 2013894157803139783
+    second: Dash_prompt_12
+  - first:
+      213: -9088997711329971355
+    second: Dash_prompt_13
+  - first:
+      213: 4473851766474977886
+    second: Dash_prompt_14
+  - first:
+      213: 1122699391143547140
+    second: Dash_prompt_15
+  - first:
+      213: 730948013637127241
+    second: Dash_prompt_16
+  - first:
+      213: 2887815383563528043
+    second: Dash_prompt_17
+  - first:
+      213: -7918290392338393812
+    second: Dash_prompt_18
+  - first:
+      213: -5084517842728246873
+    second: Dash_prompt_19
+  - first:
+      213: -5898333791543686941
+    second: Dash_prompt_20
+  - first:
+      213: 3988119821126253149
+    second: Dash_prompt_21
+  - first:
+      213: 6337504247934771659
+    second: Dash_prompt_22
+  - first:
+      213: 2018300822454360167
+    second: Dash_prompt_23
+  - first:
+      213: 5148221686760748168
+    second: Dash_prompt_24
+  - first:
+      213: -3321486773679434462
+    second: Dash_prompt_25
+  - first:
+      213: -4202782467880445661
+    second: Dash_prompt_26
+  - first:
+      213: -237321589137571345
+    second: Dash_prompt_27
+  - first:
+      213: 8152314995465314296
+    second: Dash_prompt_28
+  - first:
+      213: 2526448171477270228
+    second: Dash_prompt_29
+  - first:
+      213: -7880523009815550756
+    second: Dash_prompt_30
+  - first:
+      213: -244477499876520790
+    second: Dash_prompt_31
+  - first:
+      213: -588708540412441440
+    second: Dash_prompt_32
+  - first:
+      213: 1816294696094431605
+    second: Dash_prompt_33
+  - first:
+      213: -3936852378687513086
+    second: Dash_prompt_34
+  - first:
+      213: -402302241347701193
+    second: Dash_prompt_35
+  - first:
+      213: -539178130891841848
+    second: Dash_prompt_36
+  - first:
+      213: -1657672643009466901
+    second: Dash_prompt_37
+  - first:
+      213: 5058211298908287455
+    second: Dash_prompt_38
+  - first:
+      213: 1868070823403543890
+    second: Dash_prompt_39
+  - first:
+      213: 7904940347985479027
+    second: Dash_prompt_40
+  - first:
+      213: -1083693481043548807
+    second: Dash_prompt_41
+  - first:
+      213: -573992838969130532
+    second: Dash_prompt_42
+  - first:
+      213: -5639881880935142017
+    second: Dash_prompt_43
+  - first:
+      213: -4081038680885788838
+    second: Dash_prompt_44
+  - first:
+      213: 2234056933608333285
+    second: Dash_prompt_45
+  - first:
+      213: -2464289343654653681
+    second: Dash_prompt_46
+  - first:
+      213: 6898578373428422972
+    second: Dash_prompt_47
+  - first:
+      213: -2757259956247408104
+    second: Dash_prompt_48
+  - first:
+      213: 2345828465321759088
+    second: Dash_prompt_49
+  - first:
+      213: 5315656744240485299
+    second: Dash_prompt_50
+  - first:
+      213: 6198530352101637388
+    second: Dash_prompt_51
+  - first:
+      213: 2051467083284778074
+    second: Dash_prompt_52
+  - first:
+      213: 2956867114959556870
+    second: Dash_prompt_53
+  - first:
+      213: 3909403378401219361
+    second: Dash_prompt_54
+  - first:
+      213: -7757633315981218074
+    second: Dash_prompt_55
+  - first:
+      213: 515616920816066344
+    second: Dash_prompt_56
+  - first:
+      213: 3646311643094719384
+    second: Dash_prompt_57
+  - first:
+      213: 8456166869422463260
+    second: Dash_prompt_58
+  - first:
+      213: 5475726327589650731
+    second: Dash_prompt_59
+  - first:
+      213: 3642722917468463158
+    second: Dash_prompt_60
+  - first:
+      213: -8861645703808071588
+    second: Dash_prompt_61
+  - first:
+      213: 6163781980554995869
+    second: Dash_prompt_62
+  - first:
+      213: -6753079065123182218
+    second: Dash_prompt_63
+  - first:
+      213: -502824764627460901
+    second: Dash_prompt_64
+  - first:
+      213: -6422277278752002848
+    second: Dash_prompt_65
+  - first:
+      213: -914855239306399918
+    second: Dash_prompt_66
+  - first:
+      213: 5579743181451086779
+    second: Dash_prompt_67
+  - first:
+      213: -4538458883585516174
+    second: Dash_prompt_68
+  - first:
+      213: 8399221638557204887
+    second: Dash_prompt_69
+  - first:
+      213: -6438558959803280598
+    second: Dash_prompt_70
+  - first:
+      213: 6119044041689232343
+    second: Dash_prompt_71
+  - first:
+      213: -3268553520705556694
+    second: Dash_prompt_72
+  - first:
+      213: -1784135111441327136
+    second: Dash_prompt_73
+  - first:
+      213: -9080755961369956960
+    second: Dash_prompt_74
+  - first:
+      213: -4559342811674534749
+    second: Dash_prompt_75
+  - first:
+      213: 9015763253329048167
+    second: Dash_prompt_76
+  - first:
+      213: -4897978407419599721
+    second: Dash_prompt_77
+  - first:
+      213: -3004932994274687751
+    second: Dash_prompt_78
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dash_prompt_0
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 243
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00f0e1b2b240215d0800000000000000
+      internalID: -3093405410596614400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_1
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 217
+        width: 38
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b52083737d791a4f0800000000000000
+      internalID: -819206706604539301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 218
+        width: 37
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 271cb795be577dd90800000000000000
+      internalID: -7073055036083027598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_3
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 218
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12836242647e21690800000000000000
+      internalID: -7632784129999357919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_4
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 216
+        width: 39
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f23af313c0360310800000000000000
+      internalID: 1370836750992814839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_5
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 232
+        width: 14
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c94762c0a16ceb130800000000000000
+      internalID: 3584520168608789660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_6
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 238
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec74b7afd78d6ef20800000000000000
+      internalID: 3451684200010958798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_7
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 229
+        width: 26
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c2d805be6815d450800000000000000
+      internalID: 6112818932988039872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_8
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 212
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c63cf0229045f020800000000000000
+      internalID: 2374875374870607556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_9
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 217
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ea0788760b84c130800000000000000
+      internalID: 3586144063201938147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_10
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 226
+        width: 24
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38955c862427fcba0800000000000000
+      internalID: -6066504543493596797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_11
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 52
+        width: 103
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 742cc6f720674b0b0800000000000000
+      internalID: -5713812274126470585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_12
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 187
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c23713011ac2fb10800000000000000
+      internalID: 2013894157803139783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_13
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 204
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 563b6d3bcb46dd180800000000000000
+      internalID: -9088997711329971355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_14
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 192
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e52be766a70561e30800000000000000
+      internalID: 4473851766474977886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_15
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 192
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40198aed521a49f00800000000000000
+      internalID: 1122699391143547140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_16
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 192
+        width: 9
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94c4e1e7859d42a00800000000000000
+      internalID: 730948013637127241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_17
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 205
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6766328ac4931820800000000000000
+      internalID: 2887815383563528043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_18
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 192
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c25184057d49c1290800000000000000
+      internalID: -7918290392338393812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_19
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 191
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a12c0206f92079b0800000000000000
+      internalID: -5084517842728246873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_20
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 191
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e80b54daa8e42ea0800000000000000
+      internalID: -5898333791543686941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_21
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 209
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5abcebe8d5a85730800000000000000
+      internalID: 3988119821126253149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_22
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 190
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc16ea4398653f750800000000000000
+      internalID: 6337504247934771659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_23
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 191
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 768554497e1720c10800000000000000
+      internalID: 2018300822454360167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_24
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 186
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88436500958227740800000000000000
+      internalID: 5148221686760748168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_25
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 195
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 225dda89065b7e1d0800000000000000
+      internalID: -3321486773679434462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_26
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 191
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3291fbddc97bca5c0800000000000000
+      internalID: -4202782467880445661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_27
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 191
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe18ce5a54dd4bcf0800000000000000
+      internalID: -237321589137571345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_28
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 192
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ffdcc9ab47d22170800000000000000
+      internalID: 8152314995465314296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_29
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 193
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4de765ce93fbf0320800000000000000
+      internalID: 2526448171477270228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_30
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 193
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd4e6ab4312c2a290800000000000000
+      internalID: -7880523009815550756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_31
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 190
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aacc84852017b9cf0800000000000000
+      internalID: -244477499876520790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_32
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 165
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ac4a7c93bc74d7f0800000000000000
+      internalID: -588708540412441440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_33
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 155
+        width: 35
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57972282766c43910800000000000000
+      internalID: 1816294696094431605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_34
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 146
+        width: 52
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20edd23be9d7d59c0800000000000000
+      internalID: -3936852378687513086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_35
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 114
+        width: 71
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73670243e3cba6af0800000000000000
+      internalID: -402302241347701193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_36
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 118
+        width: 49
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ce588db8547488f0800000000000000
+      internalID: -539178130891841848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_37
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 134
+        width: 26
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beda98f8383cef8e0800000000000000
+      internalID: -1657672643009466901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_38
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 121
+        width: 35
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd1bb467060623640800000000000000
+      internalID: 5058211298908287455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_39
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 136
+        width: 20
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25d5d343488bce910800000000000000
+      internalID: 1868070823403543890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_40
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 121
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 375c3544d5df3bd60800000000000000
+      internalID: 7904940347985479027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_41
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 124
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9752ef84582f5f0f0800000000000000
+      internalID: -1083693481043548807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_42
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 117
+        width: 20
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd180a9dd84c808f0800000000000000
+      internalID: -573992838969130532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_43
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 111
+        width: 25
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7de2b78f4d1bb1b0800000000000000
+      internalID: -5639881880935142017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_44
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 107
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5f7c2721fc3d57c0800000000000000
+      internalID: -4081038680885788838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_45
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 113
+        width: 19
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ef19bfc1f6f00f10800000000000000
+      internalID: 2234056933608333285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_46
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 100
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f011fa7f5e51dcdd0800000000000000
+      internalID: -2464289343654653681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_47
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 84
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c39a46bfa7cacbf50800000000000000
+      internalID: 6898578373428422972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_48
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 100
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 812d67aadae3cb9d0800000000000000
+      internalID: -2757259956247408104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_49
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 103
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 071d08b7f8e0e8020800000000000000
+      internalID: 2345828465321759088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_50
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 78
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b31d5435a105c940800000000000000
+      internalID: 5315656744240485299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_51
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 78
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0dbe76938a950650800000000000000
+      internalID: 6198530352101637388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_52
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 31
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5c889f6176487c10800000000000000
+      internalID: 2051467083284778074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_53
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 78
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 601d23399f6e80920800000000000000
+      internalID: 2956867114959556870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_54
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 79
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1231155e8adf04630800000000000000
+      internalID: 3909403378401219361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_55
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 81
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ee243fc999575490800000000000000
+      internalID: -7757633315981218074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_56
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 83
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82f1c6d8bd6d72700800000000000000
+      internalID: 515616920816066344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_57
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 59
+        width: 34
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89b1803de1d4a9230800000000000000
+      internalID: 3646311643094719384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_58
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 69
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c195a5d07f65a5570800000000000000
+      internalID: 8456166869422463260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_59
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 60
+        width: 25
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b214c335510bdfb40800000000000000
+      internalID: 5475726327589650731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_60
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 61
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 630e1e6813d8d8230800000000000000
+      internalID: 3642722917468463158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_61
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 63
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c584723fe2c150580800000000000000
+      internalID: -8861645703808071588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_62
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 63
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d982fefdd072a8550800000000000000
+      internalID: 6163781980554995869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_63
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 63
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 679a43f9e5e3842a0800000000000000
+      internalID: -6753079065123182218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_64
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 66
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdc5c186a8b9509f0800000000000000
+      internalID: -502824764627460901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_65
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 67
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ecace677dc7fd6a0800000000000000
+      internalID: -6422277278752002848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_66
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 68
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25fac38c108cd43f0800000000000000
+      internalID: -914855239306399918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_67
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 68
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbbcc4c5cda3f6d40800000000000000
+      internalID: 5579743181451086779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_68
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 39
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27d5b20f0b72401c0800000000000000
+      internalID: -4538458883585516174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_69
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 40
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7910afb4497009470800000000000000
+      internalID: 8399221638557204887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_70
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 44
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a23548f2db4a5a6a0800000000000000
+      internalID: -6438558959803280598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_71
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 55
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d37bd5c2263be450800000000000000
+      internalID: 6119044041689232343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_72
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 45
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2f2ef4f3e3c3a2d0800000000000000
+      internalID: -3268553520705556694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_73
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 39
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ebdc33a19a7d37e0800000000000000
+      internalID: -1784135111441327136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_74
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 47
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ad6886a09caaf180800000000000000
+      internalID: -9080755961369956960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_75
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 49
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ac98e48ed5f9b0c0800000000000000
+      internalID: -4559342811674534749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_76
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 47
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 762b2bd49ec6e1d70800000000000000
+      internalID: 9015763253329048167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_77
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 49
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 794a83cc692e60cb0800000000000000
+      internalID: -4897978407419599721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_prompt_78
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 49
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f4086ecc555c46d0800000000000000
+      internalID: -3004932994274687751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Dash_prompt_0: -3093405410596614400
+      Dash_prompt_1: -819206706604539301
+      Dash_prompt_10: -6066504543493596797
+      Dash_prompt_11: -5713812274126470585
+      Dash_prompt_12: 2013894157803139783
+      Dash_prompt_13: -9088997711329971355
+      Dash_prompt_14: 4473851766474977886
+      Dash_prompt_15: 1122699391143547140
+      Dash_prompt_16: 730948013637127241
+      Dash_prompt_17: 2887815383563528043
+      Dash_prompt_18: -7918290392338393812
+      Dash_prompt_19: -5084517842728246873
+      Dash_prompt_2: -7073055036083027598
+      Dash_prompt_20: -5898333791543686941
+      Dash_prompt_21: 3988119821126253149
+      Dash_prompt_22: 6337504247934771659
+      Dash_prompt_23: 2018300822454360167
+      Dash_prompt_24: 5148221686760748168
+      Dash_prompt_25: -3321486773679434462
+      Dash_prompt_26: -4202782467880445661
+      Dash_prompt_27: -237321589137571345
+      Dash_prompt_28: 8152314995465314296
+      Dash_prompt_29: 2526448171477270228
+      Dash_prompt_3: -7632784129999357919
+      Dash_prompt_30: -7880523009815550756
+      Dash_prompt_31: -244477499876520790
+      Dash_prompt_32: -588708540412441440
+      Dash_prompt_33: 1816294696094431605
+      Dash_prompt_34: -3936852378687513086
+      Dash_prompt_35: -402302241347701193
+      Dash_prompt_36: -539178130891841848
+      Dash_prompt_37: -1657672643009466901
+      Dash_prompt_38: 5058211298908287455
+      Dash_prompt_39: 1868070823403543890
+      Dash_prompt_4: 1370836750992814839
+      Dash_prompt_40: 7904940347985479027
+      Dash_prompt_41: -1083693481043548807
+      Dash_prompt_42: -573992838969130532
+      Dash_prompt_43: -5639881880935142017
+      Dash_prompt_44: -4081038680885788838
+      Dash_prompt_45: 2234056933608333285
+      Dash_prompt_46: -2464289343654653681
+      Dash_prompt_47: 6898578373428422972
+      Dash_prompt_48: -2757259956247408104
+      Dash_prompt_49: 2345828465321759088
+      Dash_prompt_5: 3584520168608789660
+      Dash_prompt_50: 5315656744240485299
+      Dash_prompt_51: 6198530352101637388
+      Dash_prompt_52: 2051467083284778074
+      Dash_prompt_53: 2956867114959556870
+      Dash_prompt_54: 3909403378401219361
+      Dash_prompt_55: -7757633315981218074
+      Dash_prompt_56: 515616920816066344
+      Dash_prompt_57: 3646311643094719384
+      Dash_prompt_58: 8456166869422463260
+      Dash_prompt_59: 5475726327589650731
+      Dash_prompt_6: 3451684200010958798
+      Dash_prompt_60: 3642722917468463158
+      Dash_prompt_61: -8861645703808071588
+      Dash_prompt_62: 6163781980554995869
+      Dash_prompt_63: -6753079065123182218
+      Dash_prompt_64: -502824764627460901
+      Dash_prompt_65: -6422277278752002848
+      Dash_prompt_66: -914855239306399918
+      Dash_prompt_67: 5579743181451086779
+      Dash_prompt_68: -4538458883585516174
+      Dash_prompt_69: 8399221638557204887
+      Dash_prompt_7: 6112818932988039872
+      Dash_prompt_70: -6438558959803280598
+      Dash_prompt_71: 6119044041689232343
+      Dash_prompt_72: -3268553520705556694
+      Dash_prompt_73: -1784135111441327136
+      Dash_prompt_74: -9080755961369956960
+      Dash_prompt_75: -4559342811674534749
+      Dash_prompt_76: 9015763253329048167
+      Dash_prompt_77: -4897978407419599721
+      Dash_prompt_78: -3004932994274687751
+      Dash_prompt_8: 2374875374870607556
+      Dash_prompt_9: 3586144063201938147
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
