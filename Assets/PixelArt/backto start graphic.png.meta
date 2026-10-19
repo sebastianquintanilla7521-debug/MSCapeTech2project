@@ -1,0 +1,1547 @@
+fileFormatVersion: 2
+guid: 80442910f8507574a99f532b950cbcef
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5160312459249497957
+    second: backto start graphic_0
+  - first:
+      213: 3770969984313066114
+    second: backto start graphic_1
+  - first:
+      213: 2161192873289736991
+    second: backto start graphic_2
+  - first:
+      213: -2787422389234849147
+    second: backto start graphic_3
+  - first:
+      213: 2486000754814423215
+    second: backto start graphic_4
+  - first:
+      213: 6484050607469258202
+    second: backto start graphic_5
+  - first:
+      213: 2385971425302001573
+    second: backto start graphic_6
+  - first:
+      213: 8493023365030080191
+    second: backto start graphic_7
+  - first:
+      213: -2073446267065340171
+    second: backto start graphic_8
+  - first:
+      213: 6106547012423621313
+    second: backto start graphic_9
+  - first:
+      213: 4041448064664813068
+    second: backto start graphic_10
+  - first:
+      213: -4313096181202405928
+    second: backto start graphic_11
+  - first:
+      213: 1575132031659226722
+    second: backto start graphic_12
+  - first:
+      213: 3537059466181059761
+    second: backto start graphic_13
+  - first:
+      213: 8514312907294954508
+    second: backto start graphic_14
+  - first:
+      213: -4660167110795869151
+    second: backto start graphic_15
+  - first:
+      213: -6580913208824750391
+    second: backto start graphic_16
+  - first:
+      213: 7224466902854327649
+    second: backto start graphic_17
+  - first:
+      213: -8291768627468214403
+    second: backto start graphic_18
+  - first:
+      213: -7604828267023737484
+    second: backto start graphic_19
+  - first:
+      213: 8401480408303622843
+    second: backto start graphic_20
+  - first:
+      213: -8105429817947584163
+    second: backto start graphic_21
+  - first:
+      213: -4077575911173578368
+    second: backto start graphic_22
+  - first:
+      213: -2843969857081478405
+    second: backto start graphic_23
+  - first:
+      213: 8317941664739965113
+    second: backto start graphic_24
+  - first:
+      213: -3232374455002247401
+    second: backto start graphic_25
+  - first:
+      213: -4331289000640938912
+    second: backto start graphic_26
+  - first:
+      213: 612017031566285680
+    second: backto start graphic_27
+  - first:
+      213: -4487691999966642482
+    second: backto start graphic_28
+  - first:
+      213: 9074789084250709890
+    second: backto start graphic_29
+  - first:
+      213: -1952258133494545019
+    second: backto start graphic_30
+  - first:
+      213: -8701809296787766481
+    second: backto start graphic_31
+  - first:
+      213: -6057991327155307704
+    second: backto start graphic_32
+  - first:
+      213: 1369690468818042237
+    second: backto start graphic_33
+  - first:
+      213: 1872982993707753690
+    second: backto start graphic_34
+  - first:
+      213: 4760176557820454017
+    second: backto start graphic_35
+  - first:
+      213: -1639473712721398782
+    second: backto start graphic_36
+  - first:
+      213: -2942356848344281491
+    second: backto start graphic_37
+  - first:
+      213: -804349791883501271
+    second: backto start graphic_38
+  - first:
+      213: -4642084939872809410
+    second: backto start graphic_39
+  - first:
+      213: 6162981633696718153
+    second: backto start graphic_40
+  - first:
+      213: -2003337357391157648
+    second: backto start graphic_41
+  - first:
+      213: 2231989413743675804
+    second: backto start graphic_42
+  - first:
+      213: 8600233072261291544
+    second: backto start graphic_43
+  - first:
+      213: 4080322994187840386
+    second: backto start graphic_44
+  - first:
+      213: -3969658902709945196
+    second: backto start graphic_45
+  - first:
+      213: -1914519756040755126
+    second: backto start graphic_46
+  - first:
+      213: -8019417185817343780
+    second: backto start graphic_47
+  - first:
+      213: 208496777806853514
+    second: backto start graphic_48
+  - first:
+      213: 3366540597497580141
+    second: backto start graphic_49
+  - first:
+      213: 9156348715873945573
+    second: backto start graphic_50
+  - first:
+      213: 8315971544907680929
+    second: backto start graphic_51
+  - first:
+      213: 8351211650868117767
+    second: backto start graphic_52
+  - first:
+      213: -2486286302946235663
+    second: backto start graphic_53
+  - first:
+      213: 3133274525624509791
+    second: backto start graphic_54
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: backto start graphic_0
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 178
+        width: 28
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b984968a823e268b0800000000000000
+      internalID: -5160312459249497957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 242
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28204a5a83d255430800000000000000
+      internalID: 3770969984313066114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_2
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 235
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f136a8fb7791efd10800000000000000
+      internalID: 2161192873289736991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_3
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 217
+        width: 13
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58aafaafa161159d0800000000000000
+      internalID: -2787422389234849147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_4
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 234
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa0111ed38c008220800000000000000
+      internalID: 2486000754814423215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_5
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 219
+        width: 21
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad56cdb6ca9fbf950800000000000000
+      internalID: 6484050607469258202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_6
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 202
+        width: 22
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a7bb51be5cac1120800000000000000
+      internalID: 2385971425302001573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_7
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 204
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbee5b5a0c74dd570800000000000000
+      internalID: 8493023365030080191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_8
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 206
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fee5be0b93a933e0800000000000000
+      internalID: -2073446267065340171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_9
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 209
+        width: 13
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ca9bb76720deb450800000000000000
+      internalID: 6106547012423621313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_10
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 209
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0e39803a9b161830800000000000000
+      internalID: 4041448064664813068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_11
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 209
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d5365dffddc424c0800000000000000
+      internalID: -4313096181202405928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_12
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 208
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2663365cc3efbd510800000000000000
+      internalID: 1575132031659226722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_13
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 209
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b4a72728d8261130800000000000000
+      internalID: 3537059466181059761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_14
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 203
+        width: 49
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c04d6d97a7ae82670800000000000000
+      internalID: 8514312907294954508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_15
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 209
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 124cd0f04b2c35fb0800000000000000
+      internalID: -4660167110795869151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_16
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 222
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ce1352cd46eba4a0800000000000000
+      internalID: -6580913208824750391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_17
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 199
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16dd23c0f56724460800000000000000
+      internalID: 7224466902854327649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_18
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 205
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7f57007d58bdec80800000000000000
+      internalID: -8291768627468214403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_19
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 202
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47d5336bbf8367690800000000000000
+      internalID: -7604828267023737484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_20
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 176
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bba575c1bed089470800000000000000
+      internalID: 8401480408303622843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_21
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 185
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d590065668ab38f80800000000000000
+      internalID: -8105429817947584163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_22
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 178
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0812fcd005a8967c0800000000000000
+      internalID: -4077575911173578368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_23
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 170
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf27db4ab703888d0800000000000000
+      internalID: -2843969857081478405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_24
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 114
+        width: 47
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b83f3dafd34f6370800000000000000
+      internalID: 8317941664739965113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_25
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 169
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71f4b8c1f8c4423d0800000000000000
+      internalID: -3232374455002247401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_26
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 142
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06c7d312a9b24e3c0800000000000000
+      internalID: -4331289000640938912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_27
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 145
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07b5ff26f325e7800800000000000000
+      internalID: 612017031566285680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_28
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 124
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ece30a027e388b1c0800000000000000
+      internalID: -4487691999966642482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_29
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 125
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28f1b52879020fd70800000000000000
+      internalID: 9074789084250709890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_30
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 86
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 585c033329f28e4e0800000000000000
+      internalID: -1952258133494545019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_31
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 89
+        width: 10
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2306c97c86fc3780800000000000000
+      internalID: -8701809296787766481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_32
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 102
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84bb28c0cf0bdeba0800000000000000
+      internalID: -6057991327155307704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_33
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 89
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7d3326793e120310800000000000000
+      internalID: 1369690468818042237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_34
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 89
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad06c4afb1c2ef910800000000000000
+      internalID: 1872982993707753690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_35
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 91
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 184a70ddb5b8f0240800000000000000
+      internalID: 4760176557820454017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_36
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 91
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20476a6385b6f39e0800000000000000
+      internalID: -1639473712721398782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_37
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 93
+        width: 33
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6e40042906aa27d0800000000000000
+      internalID: -2942356848344281491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_38
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 92
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 921ef9b302066d4f0800000000000000
+      internalID: -804349791883501271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_39
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 92
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3ec0bd8750049fb0800000000000000
+      internalID: -4642084939872809410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_40
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 89
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94ddfb9942f478550800000000000000
+      internalID: 6162981633696718153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_41
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 88
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0762e6f9947b234e0800000000000000
+      internalID: -2003337357391157648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_42
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 67
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c99cf94db8e99fe10800000000000000
+      internalID: 2231989413743675804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_43
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 70
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81e53b9c96a2a5770800000000000000
+      internalID: 8600233072261291544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_44
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 88
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28bac6d052830a830800000000000000
+      internalID: 4080322994187840386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_45
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 85
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49cb1889240f8e8c0800000000000000
+      internalID: -3969658902709945196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_46
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 3
+        width: 192
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4829b9ec624e65e0800000000000000
+      internalID: -1914519756040755126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_47
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 63
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd8c1b5ee8e45b090800000000000000
+      internalID: -8019417185817343780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_48
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 66
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a85bdf9f6bab4e200800000000000000
+      internalID: 208496777806853514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_49
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 66
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6a46c336da58be20800000000000000
+      internalID: 3366540597497580141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_50
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 69
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e7454905a2e11f70800000000000000
+      internalID: 9156348715873945573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_51
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 71
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ac8a786f04486370800000000000000
+      internalID: 8315971544907680929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_52
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 66
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7010916ffb675e370800000000000000
+      internalID: 8351211650868117767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_53
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 64
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa68f6c7cfee7dd0800000000000000
+      internalID: -2486286302946235663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backto start graphic_54
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 63
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5521ab8490ab7b20800000000000000
+      internalID: 3133274525624509791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      backto start graphic_0: -5160312459249497957
+      backto start graphic_1: 3770969984313066114
+      backto start graphic_10: 4041448064664813068
+      backto start graphic_11: -4313096181202405928
+      backto start graphic_12: 1575132031659226722
+      backto start graphic_13: 3537059466181059761
+      backto start graphic_14: 8514312907294954508
+      backto start graphic_15: -4660167110795869151
+      backto start graphic_16: -6580913208824750391
+      backto start graphic_17: 7224466902854327649
+      backto start graphic_18: -8291768627468214403
+      backto start graphic_19: -7604828267023737484
+      backto start graphic_2: 2161192873289736991
+      backto start graphic_20: 8401480408303622843
+      backto start graphic_21: -8105429817947584163
+      backto start graphic_22: -4077575911173578368
+      backto start graphic_23: -2843969857081478405
+      backto start graphic_24: 8317941664739965113
+      backto start graphic_25: -3232374455002247401
+      backto start graphic_26: -4331289000640938912
+      backto start graphic_27: 612017031566285680
+      backto start graphic_28: -4487691999966642482
+      backto start graphic_29: 9074789084250709890
+      backto start graphic_3: -2787422389234849147
+      backto start graphic_30: -1952258133494545019
+      backto start graphic_31: -8701809296787766481
+      backto start graphic_32: -6057991327155307704
+      backto start graphic_33: 1369690468818042237
+      backto start graphic_34: 1872982993707753690
+      backto start graphic_35: 4760176557820454017
+      backto start graphic_36: -1639473712721398782
+      backto start graphic_37: -2942356848344281491
+      backto start graphic_38: -804349791883501271
+      backto start graphic_39: -4642084939872809410
+      backto start graphic_4: 2486000754814423215
+      backto start graphic_40: 6162981633696718153
+      backto start graphic_41: -2003337357391157648
+      backto start graphic_42: 2231989413743675804
+      backto start graphic_43: 8600233072261291544
+      backto start graphic_44: 4080322994187840386
+      backto start graphic_45: -3969658902709945196
+      backto start graphic_46: -1914519756040755126
+      backto start graphic_47: -8019417185817343780
+      backto start graphic_48: 208496777806853514
+      backto start graphic_49: 3366540597497580141
+      backto start graphic_5: 6484050607469258202
+      backto start graphic_50: 9156348715873945573
+      backto start graphic_51: 8315971544907680929
+      backto start graphic_52: 8351211650868117767
+      backto start graphic_53: -2486286302946235663
+      backto start graphic_54: 3133274525624509791
+      backto start graphic_6: 2385971425302001573
+      backto start graphic_7: 8493023365030080191
+      backto start graphic_8: -2073446267065340171
+      backto start graphic_9: 6106547012423621313
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -4033,7 +4033,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 507002603503040531, guid: 2e558dd8758f4ef4984501d48b0a3a2d, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.11496535
+      value: 0.13985881
       objectReference: {fileID: 0}
     - target: {fileID: 507002603503040531, guid: 2e558dd8758f4ef4984501d48b0a3a2d, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
@@ -4041,7 +4041,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 507002603503040531, guid: 2e558dd8758f4ef4984501d48b0a3a2d, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.83512694
+      value: 0.78113383
       objectReference: {fileID: 0}
     - target: {fileID: 507002603503040531, guid: 2e558dd8758f4ef4984501d48b0a3a2d, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
@@ -4298,6 +4298,22 @@ PrefabInstance:
     - target: {fileID: 527558071064575898, guid: e9cb49ee857218f43ac5cd65f0fb4974, type: 3}
       propertyPath: m_Name
       value: LevelBounds
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033770865798522666, guid: e9cb49ee857218f43ac5cd65f0fb4974, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033770865798522666, guid: e9cb49ee857218f43ac5cd65f0fb4974, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2696946704874653133, guid: e9cb49ee857218f43ac5cd65f0fb4974, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 117.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2696946704874653133, guid: e9cb49ee857218f43ac5cd65f0fb4974, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 18.25
       objectReference: {fileID: 0}
     - target: {fileID: 8162457781264482759, guid: e9cb49ee857218f43ac5cd65f0fb4974, type: 3}
       propertyPath: m_LocalPosition.x
