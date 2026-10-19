@@ -30,6 +30,12 @@ public class ColorPlatformTileMap : MonoBehaviour
 
     private Collider2D[] tilemapColliders;
 
+    // Remember the designer's Tilemap Color alpha separately from temporary hiding.
+    private float visibleOpacity = 1f;
+    private bool opacityCaptured;
+    private float lastAppliedAlpha;
+    private bool hasAppliedColor;
+
 
     // ==================================================
     // START
@@ -73,6 +79,12 @@ public class ColorPlatformTileMap : MonoBehaviour
         {
             tilemap =
                 GetComponent<Tilemap>();
+        }
+
+        if (tilemap != null && !opacityCaptured)
+        {
+            visibleOpacity = Mathf.Clamp01(tilemap.color.a);
+            opacityCaptured = true;
         }
 
 
@@ -143,6 +155,11 @@ public class ColorPlatformTileMap : MonoBehaviour
         bool matchesBackground
     )
     {
+        // Also accept Inspector alpha changes while testing, without mistaking
+        // our own hidden alpha (0) for a new designer setting.
+        if (hasAppliedColor && !Mathf.Approximately(tilemap.color.a, lastAppliedAlpha))
+            visibleOpacity = Mathf.Clamp01(tilemap.color.a);
+
         Color platformTint =
             colorManager.GetUnityColor(
                 platformColor
@@ -154,11 +171,13 @@ public class ColorPlatformTileMap : MonoBehaviour
         platformTint.a =
             matchesBackground
             ? 0f
-            : 1f;
+            : visibleOpacity;
 
 
         tilemap.color =
             platformTint;
+        lastAppliedAlpha = platformTint.a;
+        hasAppliedColor = true;
     }
 
 

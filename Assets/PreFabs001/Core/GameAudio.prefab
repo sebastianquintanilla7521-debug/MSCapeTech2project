@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7883547231514921321
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4281141375816757728}
+  - component: {fileID: 5196602795903647646}
+  m_Layer: 0
+  m_Name: GameAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4281141375816757728
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7883547231514921321}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.06144, y: -0.5848, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5196602795903647646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7883547231514921321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df532e5adc24f3a4cb13ccca01270ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameAudio
+  dashSfx: {fileID: 8300000, guid: 1b0981e8c8e00c54fa22d7ee3dfd4bf1, type: 3}
+  dashVolume: 1
+  jumpSfx: {fileID: 8300000, guid: d46ec9c91368cfa47b24f5e80fcdec88, type: 3}
+  jumpVolume: 1
+  uiClickSfx: {fileID: 8300000, guid: 5df5cca1e14394649acc0c8c7179b5b1, type: 3}
+  uiClickVolume: 1
+  deathSfx: {fileID: 8300000, guid: 2a8d7a2e0fbb35f42ac2fc35fad5ceff, type: 3}
+  deathVolume: 1
+  checkpointAndLevelCompleteSfx: {fileID: 8300000, guid: 95f91148850abce44a2fe9892d3ae68e, type: 3}
+  checkpointVolume: 1
+  levelCompleteVolume: 1
+  backgroundMusic: {fileID: 8300000, guid: 1bf520ed28b8e3b48b1235eb926de0fd, type: 3}
+  musicVolume: 0.3
+  playMusicOnStart: 1

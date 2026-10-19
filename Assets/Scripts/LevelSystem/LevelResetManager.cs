@@ -20,11 +20,7 @@ public class LevelResetManager : MonoBehaviour
     private bool allowRestartKey = true;
 
 
-    [SerializeField]
-    private KeyCode restartKey = KeyCode.R;
-
-
-    // ==================================================
+// ==================================================
     // INTERNAL
     // ==================================================
 
@@ -39,7 +35,7 @@ public class LevelResetManager : MonoBehaviour
     {
         if (
             allowRestartKey &&
-            Input.GetKeyDown(restartKey)
+            GameSettings.Pressed(GameAction.Restart)
         )
         {
             FailLevelImmediately();

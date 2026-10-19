@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Boss Level.unity
     guid: 819b5461949b2cb4881570ed9e86160c
   - enabled: 1
-    path: Assets/Scenes/PlayAgain.unity
-    guid: 985316d407e53ee4384f760bce93043c
+    path: Assets/Scenes/Credits.unity
+    guid: 66a83b9a45009e64ba23a15b70e1f503
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

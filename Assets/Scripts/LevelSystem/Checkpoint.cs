@@ -117,6 +117,8 @@ public class Checkpoint : MonoBehaviour
             savePosition
         );
 
+        GameAudio.Instance?.PlayCheckpoint();
+
 
         // ----------------------------------------------
         // VISUAL FEEDBACK

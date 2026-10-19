@@ -23,6 +23,18 @@ public sealed class GameAudio : MonoBehaviour
     [SerializeField] private AudioClip deathSfx;
     [SerializeField, Range(0f, 1f)] private float deathVolume = 1f;
 
+    [Header("Checkpoint / Level Completed")]
+    [Tooltip("The same clip is used for checkpoint activation and level completion.")]
+    [SerializeField] private AudioClip checkpointAndLevelCompleteSfx;
+    [SerializeField, Range(0f, 1f)] private float checkpointVolume = 1f;
+    [SerializeField, Range(0f, 1f)] private float levelCompleteVolume = 1f;
+
+    [Header("Background Music")]
+    [SerializeField] private AudioClip backgroundMusic;
+    [SerializeField, Range(0f, 1f)] private float musicVolume = 0.3f;
+    [SerializeField] private bool playMusicOnStart = true;
+
+    private AudioSource musicSource;
     private AudioSource gameplaySource;
     private AudioSource uiSource;
     private AudioSource deathSource;
@@ -42,6 +54,14 @@ public sealed class GameAudio : MonoBehaviour
         gameplaySource = CreateSource(false);
         uiSource = CreateSource(true);
         deathSource = CreateSource(true);
+
+        musicSource = CreateSource(false);
+        musicSource.loop = true;
+        ApplyEffectsVolume();
+        musicSource.volume = Mathf.Clamp01(musicVolume) * GameSettings.MasterVolume * GameSettings.MusicVolume;
+
+        if (playMusicOnStart)
+            PlayMusic();
     }
 
     private AudioSource CreateSource(bool ignoreListenerPause)
@@ -55,13 +75,57 @@ public sealed class GameAudio : MonoBehaviour
         return source;
     }
 
+    private void Update()
+    {
+        RefreshVolumes();
+    }
+
+    // Called immediately by the settings UI, and each frame for already-playing audio.
+    public void RefreshVolumes()
+    {
+        ApplyEffectsVolume();
+        if (musicSource != null)
+            musicSource.volume = Mathf.Clamp01(musicVolume) * GameSettings.MasterVolume * GameSettings.MusicVolume;
+    }
+
+    private void ApplyEffectsVolume()
+    {
+        float gain = GameSettings.MasterVolume * GameSettings.EffectsVolume;
+        if (gameplaySource != null) gameplaySource.volume = gain;
+        if (uiSource != null) uiSource.volume = gain;
+        if (deathSource != null) deathSource.volume = gain;
+    }
+
+    public void PlayMusic()
+    {
+        if (musicSource == null || backgroundMusic == null)
+            return;
+
+        // Repeated calls for the current track keep its playback position.
+        if (musicSource.clip == backgroundMusic && musicSource.isPlaying)
+            return;
+
+        musicSource.clip = backgroundMusic;
+        musicSource.volume = Mathf.Clamp01(musicVolume) * GameSettings.MasterVolume * GameSettings.MusicVolume;
+        musicSource.Play();
+    }
+
+    public void StopMusic()
+    {
+        if (musicSource != null)
+            musicSource.Stop();
+    }
+
     public void PlayDash() => Play(gameplaySource, dashSfx, dashVolume);
     public void PlayJump() => Play(gameplaySource, jumpSfx, jumpVolume);
     public void PlayUIClick() => Play(uiSource, uiClickSfx, uiClickVolume);
     public void PlayDeath() => Play(deathSource, deathSfx, deathVolume);
+    public void PlayCheckpoint() => Play(uiSource, checkpointAndLevelCompleteSfx, checkpointVolume);
+    public void PlayLevelComplete() => Play(uiSource, checkpointAndLevelCompleteSfx, levelCompleteVolume);
 
     private void Play(AudioSource source, AudioClip clip, float volume)
     {
+        ApplyEffectsVolume();
         if (source != null && clip != null)
             source.PlayOneShot(clip, Mathf.Clamp01(volume));
     }

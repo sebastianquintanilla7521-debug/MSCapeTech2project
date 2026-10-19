@@ -94,8 +94,8 @@ public class PlayerMovement : MonoBehaviour
     // DASH DIRECTION MEMORY
     // =========================
 
-    // Your current value was 3 seconds.
-    public float dashDirectionMemory = 3f;
+    // Brief direction memory for horizontal dashes only.
+    public float dashDirectionMemory = 0.15f;
 
 
     // =========================
@@ -129,7 +129,20 @@ public class PlayerMovement : MonoBehaviour
         get { return isGrounded; }
     }
 
+    private bool airDashUsed = false;
     private bool isDashing;
+
+    // Read-only animation information; no physics or input rules are changed.
+    public bool IsDashing => isDashing;
+    public int DashAnimationVersion { get; private set; }
+    public int JumpAnimationVersion { get; private set; }
+    public Vector2 DashAnimationDirection { get; private set; }
+
+    private void RecordDashAnimation(Vector2 direction)
+    {
+        DashAnimationDirection = direction;
+        DashAnimationVersion++;
+    }
     private bool controlsLocked;
 
     private bool isGroundDashing;
@@ -188,8 +201,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
-        vertical = Input.GetAxisRaw("Vertical");
+        horizontal = GameSettings.Horizontal;
+        vertical = GameSettings.Vertical;
 
 
         // Remember the most recent horizontal direction
@@ -211,7 +224,7 @@ public class PlayerMovement : MonoBehaviour
         // =========================
 
         if (
-            Input.GetKeyDown(KeyCode.Space)
+            GameSettings.Pressed(GameAction.Jump)
             &&
             jumpsRemaining > 0
             &&
@@ -226,6 +239,7 @@ public class PlayerMovement : MonoBehaviour
             );
 
             jumpsRemaining--;
+            JumpAnimationVersion++;
             GameAudio.Instance?.PlayJump();
 
             movingPlatformGroundedUntil =
@@ -241,7 +255,7 @@ public class PlayerMovement : MonoBehaviour
         // =========================
 
         if (
-            Input.GetMouseButtonDown(1)
+            GameSettings.Pressed(GameAction.Dash)
             &&
             dashCharges > 0
             &&
@@ -274,7 +288,7 @@ public class PlayerMovement : MonoBehaviour
                 );
             }
 
-            else
+            else if (!airDashUsed)
             {
                 StartCoroutine(
                     AirDash()
@@ -617,6 +631,8 @@ public class PlayerMovement : MonoBehaviour
             direction = facingDirection;
         }
 
+        RecordDashAnimation(new Vector2(direction, 0f));
+
 
         float startX =
             rb.linearVelocity.x;
@@ -754,6 +770,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         dashCharges--;
+        airDashUsed = true;
         GameAudio.Instance?.PlayDash();
 
 
@@ -763,6 +780,8 @@ public class PlayerMovement : MonoBehaviour
 
 
         isDashing = true;
+        RecordDashAnimation(new Vector2(
+            horizontal > 0.01f ? 1f : horizontal < -0.01f ? -1f : 0f, -1f));
         isGroundDashing = true;
 
         landingPausePending = true;
@@ -843,6 +862,12 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator AirDash()
     {
+        if (airDashUsed)
+        {
+            yield break;
+        }
+
+        airDashUsed = true;
         dashCharges--;
         GameAudio.Instance?.PlayDash();
 
@@ -855,11 +880,17 @@ public class PlayerMovement : MonoBehaviour
 
 
         int horizontalDirection =
-            GetDashHorizontalDirection();
+            vertical != 0f
+            ? (horizontal > 0.01f ? 1 : horizontal < -0.01f ? -1 : 0)
+            : GetDashHorizontalDirection();
 
 
         bool hasHorizontalDirection =
             horizontalDirection != 0;
+
+        RecordDashAnimation(new Vector2(
+            vertical == 0f && horizontalDirection == 0 ? facingDirection : horizontalDirection,
+            vertical > 0f ? 1f : vertical < 0f ? -1f : 0f));
 
 
         // =========================
@@ -1126,6 +1157,7 @@ public class PlayerMovement : MonoBehaviour
     void Landed()
     {
         isGrounded = true;
+        airDashUsed = false;
 
         // Restore jumps.
         jumpsRemaining = maxJumps;

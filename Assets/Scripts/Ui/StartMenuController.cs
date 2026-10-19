@@ -30,6 +30,10 @@ public class StartMenuController : MonoBehaviour
     [SerializeField]
     private CanvasGroup settingsPanel;
 
+    [Header("Settings Popup Appearance")]
+    [Tooltip("Assign the whole Popuptileabletexture.png texture from Assets/PixelArt.")]
+    [SerializeField] private Texture2D settingsPopupTexture;
+
 
     // ==================================================
     // STARTUP
@@ -75,18 +79,10 @@ public class StartMenuController : MonoBehaviour
 
     public void OpenSettings()
     {
-        if (settingsPanel == null)
-        {
-            return;
-        }
-
         GameAudio.Instance?.PlayUIClick();
-
-        settingsPanel.alpha = 1f;
-        settingsPanel.interactable = true;
-        settingsPanel.blocksRaycasts = true;
+        HideSettingsImmediately();
+        GameSettingsMenu.Open(settingsPopupTexture);
     }
-
 
     public void CloseSettings()
     {

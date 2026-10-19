@@ -55,6 +55,7 @@ public class LevelExit : MonoBehaviour
 
 
         levelCompleted = true;
+        GameAudio.Instance?.PlayLevelComplete();
 
 
         player.enabled = false;

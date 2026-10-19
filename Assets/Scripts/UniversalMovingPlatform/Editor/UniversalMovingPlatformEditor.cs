@@ -512,12 +512,41 @@ public class UniversalMovingPlatformEditor : Editor
         );
 
 
-        EditorGUILayout.PropertyField(
-            startMode,
-            new GUIContent(
-                "Start Mode"
-            )
-        );
+        SerializedProperty enemyMode = serializedObject.FindProperty("enemyMode");
+        EditorGUILayout.PropertyField(enemyMode, new GUIContent("Enemy Mode"));
+        if (enemyMode.boolValue)
+        {
+            SerializedProperty enemyStart = serializedObject.FindProperty("enemyStartMode");
+            EditorGUILayout.PropertyField(enemyStart, new GUIContent("Enemy Start Mode"));
+            if (enemyStart.enumValueIndex == (int)UniversalMovingPlatform.EnemyStartMode.WhenPlayerGetsClose)
+            {
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("enemyActivationDistance"), new GUIContent("Activation Distance"));
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("enemyActivationTarget"), new GUIContent("Player (Optional)"));
+            }
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("enemySprite"), new GUIContent("Enemy Sprite"));
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("flipEnemyWithMovement"), new GUIContent("Flip Enemy With Movement"));
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("enemyLayerName"), new GUIContent("Enemy Layer Name"));
+        }
+        else
+            EditorGUILayout.PropertyField(startMode, new GUIContent("Start Mode"));
+
+        Section("AUTOMATIC PATH TRACKS");
+        SerializedProperty autoTracks = serializedObject.FindProperty("automaticPathTracks");
+        EditorGUILayout.PropertyField(autoTracks, new GUIContent("Automatic Path Tracks"));
+        if (autoTracks.boolValue)
+        {
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("automaticTrackTemplate"), new GUIContent("Track Visual Template"));
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("trackThicknessScale"), new GUIContent("Track Thickness Scale"));
+            if (isFerrisWheel)
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("ferrisTrackSegments"), new GUIContent("Circle Segments"));
+            EditorGUILayout.HelpBox("Assign a prefab made from your existing track visual. Its frames, opacity, animation speed, and reverse/stop options are reused. Tracks follow all path points automatically and stay behind while the platform moves. Scene previews update when points move; prefab assets generate tracks when placed in a scene.", MessageType.Info);
+            if (GUILayout.Button("REBUILD AUTOMATIC TRACKS"))
+            {
+                serializedObject.ApplyModifiedProperties();
+                platform.RefreshAutomaticTracks(true);
+                serializedObject.Update();
+            }
+        }
 
 
         Space();
@@ -905,6 +934,8 @@ public class UniversalMovingPlatformEditor : Editor
         }
 
 
+        if (enemyMode.boolValue) startingSegmentCount.intValue = 1;
+        EditorGUI.BeginDisabledGroup(enemyMode.boolValue);
         EditorGUILayout.PropertyField(
             startingSegmentCount,
             new GUIContent(
@@ -929,6 +960,7 @@ public class UniversalMovingPlatformEditor : Editor
         );
 
 
+        EditorGUI.EndDisabledGroup();
         EditorGUI.BeginDisabledGroup(
             startingSegmentPrefab == null
         );
@@ -975,6 +1007,7 @@ public class UniversalMovingPlatformEditor : Editor
         );
 
 
+        EditorGUI.BeginDisabledGroup(enemyMode.boolValue);
         if (carryPlayer != null)
         {
             EditorGUILayout.PropertyField(
@@ -1089,6 +1122,7 @@ public class UniversalMovingPlatformEditor : Editor
         );
 
 
+        EditorGUI.EndDisabledGroup();
         Space();
 
 
@@ -1099,6 +1133,7 @@ public class UniversalMovingPlatformEditor : Editor
         Section(
             "DIRECTIONAL PLATFORM SPRITES"
         );
+        EditorGUI.BeginDisabledGroup(enemyMode.boolValue);
 
 
         if (automaticDirectionalSprites != null)
@@ -1410,6 +1445,7 @@ public class UniversalMovingPlatformEditor : Editor
         // EDITOR QUALITY OF LIFE
         // ==================================================
 
+        EditorGUI.EndDisabledGroup();
         Section(
             "EDITOR QUALITY OF LIFE"
         );
@@ -1496,6 +1532,7 @@ public class UniversalMovingPlatformEditor : Editor
 
         serializedObject
             .ApplyModifiedProperties();
+        platform.RefreshAutomaticTracks();
     }
 
 

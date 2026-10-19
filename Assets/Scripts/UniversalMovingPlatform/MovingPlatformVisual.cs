@@ -11,6 +11,7 @@ public class MovingPlatformTrackVisual : MonoBehaviour
     [Tooltip("Drag the moving platform that this track belongs to here.")]
     [SerializeField]
     private Transform linkedPlatform;
+    private UniversalMovingPlatform generatedDirectionSource;
 
 
     // ==================================================
@@ -248,6 +249,9 @@ public class MovingPlatformTrackVisual : MonoBehaviour
         }
 
 
+        if (generatedDirectionSource != null && reverseWithPlatformDirection)
+            animationDirection = generatedDirectionSource.TrackPlaybackDirection;
+
         lastPlatformPosition =
             linkedPlatform.position;
     }
@@ -412,5 +416,23 @@ public class MovingPlatformTrackVisual : MonoBehaviour
             trackRenderer.sprite =
                 animationFrames[currentFrame];
         }
+    }
+    public Sprite FirstTrackSprite => animationFrames != null && animationFrames.Length > 0 ?
+        animationFrames[0] : (trackRenderer != null ? trackRenderer.sprite : GetComponent<SpriteRenderer>()?.sprite);
+
+    public void ConfigureGeneratedTrack(UniversalMovingPlatform platform)
+    {
+        linkedPlatform = platform.transform;
+        generatedDirectionSource = platform;
+        trackRenderer = GetComponent<SpriteRenderer>();
+        lastPlatformPosition = linkedPlatform.position;
+        hasOriginalTravelDirection = false;
+        hasBeenActivated = alwaysActive;
+        animationTimer = 0f;
+        currentFrame = 0;
+        isCurrentlyMoving = false;
+        if (animationFrames != null && animationFrames.Length > 0 && trackRenderer != null)
+            trackRenderer.sprite = animationFrames[0];
+        UpdateOpacity();
     }
 }

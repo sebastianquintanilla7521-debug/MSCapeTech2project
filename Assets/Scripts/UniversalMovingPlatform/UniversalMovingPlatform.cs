@@ -16,6 +16,8 @@ public class UniversalMovingPlatform : MonoBehaviour
         FerrisWheel
     }
 
+    public enum EnemyStartMode { AlwaysMoving, WhenPlayerGetsClose }
+
     public enum StartMode
     {
         AlwaysMoving,
@@ -391,6 +393,21 @@ public class UniversalMovingPlatform : MonoBehaviour
 
     private bool dangerTriggered = false;
 
+    [Header("Enemy Mode")]
+    [Tooltip("Use this moving platform as an enemy: contact kills the player unless they are dashing.")]
+    [SerializeField] private bool enemyMode = false;
+    [Tooltip("Optional enemy artwork. Use one starting segment for a single enemy.")]
+    [SerializeField] private Sprite enemySprite;
+    [Tooltip("The source enemy sprite faces right; mirror it when traveling left.")]
+    [SerializeField] private bool flipEnemyWithMovement = true;
+    [Tooltip("Keep this layer OUT of the player's ground-check masks.")]
+    [SerializeField] private string enemyLayerName = "Enemy";
+    private bool enemyDefeated;
+    [SerializeField] private EnemyStartMode enemyStartMode = EnemyStartMode.AlwaysMoving;
+    [SerializeField, Min(0.1f)] private float enemyActivationDistance = 5f;
+    [Tooltip("Optional; automatically finds PlayerMovement if empty.")]
+    [SerializeField] private Transform enemyActivationTarget;
+
     private float startDelayTimer = 0f;
 
     private Vector2 lastPlatformMoveDelta = Vector2.zero;
@@ -609,14 +626,12 @@ public class UniversalMovingPlatform : MonoBehaviour
     private void Start()
     {
         SetupMovement();
+        RefreshAutomaticTracks(true);
 
         RefreshDirectionalSpritePreview();
 
 
-        if (
-            startMode ==
-            StartMode.AlwaysMoving
-        )
+        if (enemyMode ? enemyStartMode == EnemyStartMode.AlwaysMoving : startMode == StartMode.AlwaysMoving)
         {
             BeginMovement();
         }
@@ -629,6 +644,7 @@ public class UniversalMovingPlatform : MonoBehaviour
 
     private void FixedUpdate()
     {
+        TryStartEnemyNearby();
         lastPlatformMoveDelta =
             Vector2.zero;
 
@@ -749,7 +765,7 @@ public class UniversalMovingPlatform : MonoBehaviour
             startDelay;
 
 
-        if (enableDurability)
+        if (enableDurability && !enemyMode)
         {
             BeginDurability();
         }
@@ -1008,6 +1024,11 @@ public class UniversalMovingPlatform : MonoBehaviour
         Collision2D collision
     )
     {
+        if (enemyMode)
+        {
+            ResolveEnemyContact(collision.gameObject.GetComponentInParent<PlayerMovement>());
+            return true;
+        }
         if (
             !dangerousPlatform ||
             dangerTriggered
@@ -1074,6 +1095,11 @@ public class UniversalMovingPlatform : MonoBehaviour
 
     private void ConfigurePlatformInteraction()
     {
+        if (enemyMode)
+        {
+            ConfigureEnemyInteraction();
+            return;
+        }
         if (startingSegmentsParent == null)
         {
             return;
@@ -1233,6 +1259,11 @@ public class UniversalMovingPlatform : MonoBehaviour
 
     public void RefreshDirectionalSpritePreview()
     {
+        if (enemyMode)
+        {
+            ApplyEnemyAppearance(GetUpcomingMovementDirection());
+            return;
+        }
         if (!automaticDirectionalSprites)
         {
             return;
@@ -1388,6 +1419,11 @@ public class UniversalMovingPlatform : MonoBehaviour
         Vector2 movementDelta
     )
     {
+        if (enemyMode)
+        {
+            ApplyEnemyAppearance(movementDelta);
+            return;
+        }
         if (!automaticDirectionalSprites)
         {
             return;
@@ -2212,6 +2248,7 @@ public class UniversalMovingPlatform : MonoBehaviour
 
     public bool CanAcceptGrowthSegment()
     {
+        if (enemyMode) return false;
         if (
             movementType ==
             MovementType.FerrisWheel
@@ -2951,5 +2988,271 @@ public class UniversalMovingPlatform : MonoBehaviour
             segment.gameObject,
             brokenPieceLifetime
         );
+    }
+
+    // Enemy mode uses the existing path movement, with trigger contact instead of a rideable floor.
+    private void ConfigureEnemyInteraction()
+    {
+        foreach (ColorPlatform color in GetComponentsInChildren<ColorPlatform>(true))
+            color.enabled = false;
+
+        int layer = LayerMask.NameToLayer(enemyLayerName);
+        if (layer < 0)
+        {
+            layer = LayerMask.NameToLayer("Default");
+            Debug.LogWarning(name + ": Create an Enemy layer and exclude it from the player's ground masks. Using Default for now.", this);
+        }
+        gameObject.layer = layer;
+        foreach (Collider2D hitbox in GetComponentsInChildren<Collider2D>(true))
+        {
+            hitbox.gameObject.layer = layer;
+            hitbox.usedByEffector = false;
+            hitbox.isTrigger = true;
+        }
+        foreach (PlatformEffector2D effector in GetComponentsInChildren<PlatformEffector2D>(true))
+            effector.enabled = false;
+        ApplyEnemyAppearance(Vector2.zero);
+    }
+
+    private void ApplyEnemyAppearance(Vector2 direction)
+    {
+        Transform visualRoot = startingSegmentsParent != null ? startingSegmentsParent : transform;
+        foreach (SpriteRenderer visual in visualRoot.GetComponentsInChildren<SpriteRenderer>(true))
+        {
+            if (enemySprite != null) visual.sprite = enemySprite;
+            visual.color = Color.white;
+            if (flipEnemyWithMovement && Mathf.Abs(direction.x) > directionChangeThreshold)
+                visual.flipX = direction.x < 0f;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (enemyMode) ResolveEnemyContact(other.GetComponentInParent<PlayerMovement>());
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (enemyMode) ResolveEnemyContact(other.GetComponentInParent<PlayerMovement>());
+    }
+
+    private void ResolveEnemyContact(PlayerMovement player)
+    {
+        if (enemyDefeated || dangerTriggered || player == null || !player.isActiveAndEnabled)
+            return;
+
+        if (player.IsDashing)
+        {
+            // Mark defeated BEFORE disabling anything, so multiple hitboxes cannot also kill the player.
+            enemyDefeated = true;
+            movementFinished = true;
+            lastPlatformMoveDelta = Vector2.zero;
+            passengers.Clear();
+            StopAllCoroutines();
+            if (rb != null) rb.linearVelocity = Vector2.zero;
+            gameObject.SetActive(false);
+            return;
+        }
+
+        dangerTriggered = true;
+        player.enabled = false;
+        Rigidbody2D playerBody = player.GetComponent<Rigidbody2D>();
+        if (playerBody != null)
+        {
+            playerBody.linearVelocity = Vector2.zero;
+            playerBody.simulated = false;
+        }
+        LevelResetManager reset = FindAnyObjectByType<LevelResetManager>();
+        if (reset != null)
+            reset.FailLevelImmediately();
+        else
+        {
+            GameAudio.Instance?.PlayDeath();
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
+
+
+    [Header("Automatic Path Tracks")]
+    [SerializeField] private bool automaticPathTracks;
+    [Tooltip("A prefab with the existing MovingPlatformTrackVisual and SpriteRenderer. Its settings are copied to every generated piece.")]
+    [SerializeField] private MovingPlatformTrackVisual automaticTrackTemplate;
+    [SerializeField, Min(0.01f)] private float trackThicknessScale = 1f;
+    [SerializeField, Range(12, 128)] private int ferrisTrackSegments = 48;
+    [SerializeField, HideInInspector] private UniversalAutoTrackLayout generatedTrackLayout;
+    private int generatedTrackSignature;
+    private bool generatedTrackHasSignature;
+    private bool rebuildingAutomaticTracks;
+    private Transform cachedActivationPlayer;
+
+    public int TrackPlaybackDirection => movementType == MovementType.FerrisWheel ?
+        (clockwise ? -1 : 1) : (pathBehavior == PathBehavior.Loop && movementPointsParent != null && movementPointsParent.childCount == 2 && loopClosureSegment ? -movementDirection : movementDirection);
+
+    private void TryStartEnemyNearby()
+    {
+        if (!enemyMode || movementStarted || movementFinished ||
+            enemyStartMode != EnemyStartMode.WhenPlayerGetsClose) return;
+        Transform target = enemyActivationTarget;
+        if (target == null)
+        {
+            if (cachedActivationPlayer == null)
+            {
+                PlayerMovement found = FindAnyObjectByType<PlayerMovement>();
+                if (found != null) cachedActivationPlayer = found.transform;
+            }
+            target = cachedActivationPlayer;
+        }
+        if (target != null && ((Vector2)(target.position - transform.position)).sqrMagnitude <=
+            enemyActivationDistance * enemyActivationDistance)
+            BeginMovement();
+    }
+
+    public void RefreshAutomaticTracks(bool force = false)
+    {
+        if (rebuildingAutomaticTracks) return;
+        // Duplicating a platform must never edit the original platform's track root.
+        if (generatedTrackLayout != null && generatedTrackLayout.Owner != this)
+            generatedTrackLayout = null;
+
+        bool valid = automaticPathTracks && automaticTrackTemplate != null &&
+            movementPointsParent != null && movementPointsParent.childCount >=
+            (movementType == MovementType.FerrisWheel ? 1 : 2);
+        if (!valid)
+        {
+            ClearAutomaticTracks();
+            return;
+        }
+#if UNITY_EDITOR
+        // Prefab assets store the option/template; derived tracks are generated for scene instances.
+        if (!Application.isPlaying && (UnityEditor.EditorUtility.IsPersistent(this) ||
+            UnityEditor.SceneManagement.PrefabStageUtility.GetPrefabStage(gameObject) != null)) return;
+#endif
+        SpriteRenderer templateRenderer = automaticTrackTemplate.GetComponent<SpriteRenderer>();
+        if (templateRenderer == null || templateRenderer.sprite == null) return;
+
+        int signature = CalculateTrackSignature(templateRenderer);
+        if (!force && generatedTrackLayout != null && generatedTrackHasSignature &&
+            generatedTrackSignature == signature) return;
+
+        rebuildingAutomaticTracks = true;
+        try
+        {
+            if (generatedTrackLayout == null)
+            {
+                GameObject root = new GameObject(name + "_AutoTracks");
+                root.hideFlags = HideFlags.DontSaveInEditor | HideFlags.DontSaveInBuild;
+                UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(root, gameObject.scene);
+                generatedTrackLayout = root.AddComponent<UniversalAutoTrackLayout>();
+                generatedTrackLayout.SetOwner(this);
+            }
+            Transform container = generatedTrackLayout.transform;
+            for (int i = container.childCount - 1; i >= 0; i--)
+            {
+                GameObject piece = container.GetChild(i).gameObject;
+                piece.SetActive(false);
+                if (Application.isPlaying) Destroy(piece); else DestroyImmediate(piece);
+            }
+
+            if (movementType == MovementType.FerrisWheel)
+            {
+                Vector3 center = movementPointsParent.GetChild(0).position;
+                float radius = Application.isPlaying ? ferrisRadius : Vector2.Distance(transform.position, center);
+                int count = Mathf.Clamp(ferrisTrackSegments, 12, 128);
+                for (int i = 0; i < count; i++)
+                {
+                    float a = i * Mathf.PI * 2f / count, b = (i + 1) * Mathf.PI * 2f / count;
+                    CreateTrackSpan(center + new Vector3(Mathf.Cos(a), Mathf.Sin(a), 0f) * radius,
+                        center + new Vector3(Mathf.Cos(b), Mathf.Sin(b), 0f) * radius, templateRenderer, container);
+                }
+            }
+            else
+            {
+                int count = movementPointsParent.childCount;
+                for (int i = 0; i < count - 1; i++)
+                    CreateTrackSpan(movementPointsParent.GetChild(i).position,
+                        movementPointsParent.GetChild(i + 1).position, templateRenderer, container);
+                if (pathBehavior == PathBehavior.Loop && count > 2)
+                    CreateTrackSpan(movementPointsParent.GetChild(count - 1).position,
+                        movementPointsParent.GetChild(0).position, templateRenderer, container);
+            }
+            generatedTrackSignature = signature;
+            generatedTrackHasSignature = true;
+        }
+        finally { rebuildingAutomaticTracks = false; }
+    }
+
+    private int CalculateTrackSignature(SpriteRenderer renderer)
+    {
+        unchecked
+        {
+            int hash = automaticTrackTemplate.GetHashCode();
+            hash = hash * 31 + JsonUtility.ToJson(automaticTrackTemplate).GetHashCode();
+            hash = hash * 31 + (automaticTrackTemplate.FirstTrackSprite != null ? automaticTrackTemplate.FirstTrackSprite.GetHashCode() : 0);
+            hash = hash * 31 + renderer.color.GetHashCode();
+            hash = hash * 31 + renderer.sortingLayerID;
+            hash = hash * 31 + renderer.sortingOrder;
+            hash = hash * 31 + automaticTrackTemplate.transform.lossyScale.GetHashCode();
+            hash = hash * 31 + (int)movementType;
+            hash = hash * 31 + (int)pathBehavior;
+            hash = hash * 31 + trackThicknessScale.GetHashCode();
+            hash = hash * 31 + ferrisTrackSegments;
+            for (int i = 0; i < movementPointsParent.childCount; i++)
+                hash = hash * 31 + movementPointsParent.GetChild(i).position.GetHashCode();
+            if (movementType == MovementType.FerrisWheel)
+            {
+                float radius = Application.isPlaying ? ferrisRadius :
+                    Vector2.Distance(transform.position, movementPointsParent.GetChild(0).position);
+                hash = hash * 31 + Mathf.RoundToInt(radius * 1000f);
+            }
+            return hash;
+        }
+    }
+
+    private void CreateTrackSpan(Vector3 start, Vector3 end, SpriteRenderer source, Transform container)
+    {
+        Vector3 delta = end - start;
+        delta.z = 0f;
+        float length = delta.magnitude;
+        float spriteWidth = source.sprite.bounds.size.x;
+        if (length < 0.001f || spriteWidth < 0.001f) return;
+        float nativeWidth = spriteWidth * Mathf.Max(0.01f, Mathf.Abs(source.transform.lossyScale.x));
+        int count = Mathf.CeilToInt(length / nativeWidth);
+        Vector3 direction = delta / length;
+        Quaternion rotation = Quaternion.Euler(0f, 0f, Mathf.Atan2(delta.y, delta.x) * Mathf.Rad2Deg);
+        for (int i = 0; i < count; i++)
+        {
+            float distance = i * nativeWidth;
+            float width = Mathf.Min(nativeWidth, length - distance);
+            MovingPlatformTrackVisual piece = Instantiate(automaticTrackTemplate, container);
+            piece.name = "Track Piece";
+            piece.transform.position = start + direction * (distance + width * 0.5f);
+            piece.transform.rotation = rotation;
+            piece.transform.localScale = new Vector3(width / spriteWidth,
+                Mathf.Abs(source.transform.lossyScale.y) * trackThicknessScale, 1f);
+            foreach (Collider2D collider in piece.GetComponentsInChildren<Collider2D>(true))
+                collider.enabled = false;
+            piece.ConfigureGeneratedTrack(this);
+            piece.gameObject.SetActive(true);
+        }
+    }
+
+    public void ClearAutomaticTracks()
+    {
+        generatedTrackHasSignature = false;
+        if (generatedTrackLayout == null || generatedTrackLayout.Owner != this) return;
+        GameObject root = generatedTrackLayout.gameObject;
+        generatedTrackLayout = null;
+        root.SetActive(false);
+        if (Application.isPlaying) Destroy(root); else DestroyImmediate(root);
+    }
+
+    private void OnDestroy() => ClearAutomaticTracks();
+
+    private void OnDrawGizmosSelected()
+    {
+        if (!enemyMode || enemyStartMode != EnemyStartMode.WhenPlayerGetsClose) return;
+        Gizmos.color = new Color(1f, 0.7f, 0.1f, 0.8f);
+        Gizmos.DrawWireSphere(transform.position, enemyActivationDistance);
     }
 }
