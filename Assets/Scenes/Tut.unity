@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 202608406}
   - component: {fileID: 202608404}
   - component: {fileID: 202608405}
+  - component: {fileID: 202608407}
   m_Layer: 5
   m_Name: TutorialPopup_Root_DownDash
   m_TagString: Untagged
@@ -298,6 +299,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 202608402}
   m_CullTransparentMesh: 1
+--- !u!114 &202608407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202608402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e21ab898bd6a1384094969e3cae1a118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PopupOpenSound
+  popupAppearSound: {fileID: 8300000, guid: e14eaa2e507e6ab41a1ecc66e8b21401, type: 3}
+  volume: 1
 --- !u!1 &283827372
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,6 +808,7 @@ GameObject:
   - component: {fileID: 460472635}
   - component: {fileID: 460472633}
   - component: {fileID: 460472634}
+  - component: {fileID: 460472636}
   m_Layer: 5
   m_Name: TutorialPopup_Root_Dash
   m_TagString: Untagged
@@ -853,6 +869,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 460472631}
   m_CullTransparentMesh: 1
+--- !u!114 &460472636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460472631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e21ab898bd6a1384094969e3cae1a118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PopupOpenSound
+  popupAppearSound: {fileID: 8300000, guid: e14eaa2e507e6ab41a1ecc66e8b21401, type: 3}
+  volume: 1
 --- !u!1 &474117915
 GameObject:
   m_ObjectHideFlags: 0
@@ -2669,6 +2699,7 @@ GameObject:
   - component: {fileID: 1514816255}
   - component: {fileID: 1514816253}
   - component: {fileID: 1514816254}
+  - component: {fileID: 1514816256}
   m_Layer: 5
   m_Name: TutorialPopup_Root_DoubleJump
   m_TagString: Untagged
@@ -2729,6 +2760,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1514816251}
   m_CullTransparentMesh: 1
+--- !u!114 &1514816256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514816251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e21ab898bd6a1384094969e3cae1a118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PopupOpenSound
+  popupAppearSound: {fileID: 8300000, guid: e14eaa2e507e6ab41a1ecc66e8b21401, type: 3}
+  volume: 1
 --- !u!224 &1564338718 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3437127230303288207, guid: 0fb9b5a47f505ef4a832ae71d83cfcec, type: 3}
@@ -4033,7 +4078,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 507002603503040531, guid: 2e558dd8758f4ef4984501d48b0a3a2d, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.13985881
+      value: 0.13492298
       objectReference: {fileID: 0}
     - target: {fileID: 507002603503040531, guid: 2e558dd8758f4ef4984501d48b0a3a2d, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
@@ -4041,7 +4086,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 507002603503040531, guid: 2e558dd8758f4ef4984501d48b0a3a2d, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.78113383
+      value: 0.7918395
       objectReference: {fileID: 0}
     - target: {fileID: 507002603503040531, guid: 2e558dd8758f4ef4984501d48b0a3a2d, type: 3}
       propertyPath: m_NormalizedViewPortRect.height

@@ -119,6 +119,8 @@ public sealed class GameAudio : MonoBehaviour
     public void PlayDash() => Play(gameplaySource, dashSfx, dashVolume);
     public void PlayJump() => Play(gameplaySource, jumpSfx, jumpVolume);
     public void PlayUIClick() => Play(uiSource, uiClickSfx, uiClickVolume);
+    // The clip belongs to the popup prefab; playback uses the persistent UI source.
+    public void PlayPopup(AudioClip clip, float volume = 1f) => Play(uiSource, clip, volume);
     public void PlayDeath() => Play(deathSource, deathSfx, deathVolume);
     public void PlayCheckpoint() => Play(uiSource, checkpointAndLevelCompleteSfx, checkpointVolume);
     public void PlayLevelComplete() => Play(uiSource, checkpointAndLevelCompleteSfx, levelCompleteVolume);
