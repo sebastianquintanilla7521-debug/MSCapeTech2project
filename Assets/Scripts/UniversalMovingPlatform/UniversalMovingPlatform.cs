@@ -2991,6 +2991,8 @@ public class UniversalMovingPlatform : MonoBehaviour
     }
 
     // Enemy mode uses the existing path movement, with trigger contact instead of a rideable floor.
+    private BoxCollider2D enemyContactHitbox;
+
     private void ConfigureEnemyInteraction()
     {
         foreach (ColorPlatform color in GetComponentsInChildren<ColorPlatform>(true))
@@ -3008,10 +3010,44 @@ public class UniversalMovingPlatform : MonoBehaviour
             hitbox.gameObject.layer = layer;
             hitbox.usedByEffector = false;
             hitbox.isTrigger = true;
+            // Platform strips are not reliable enemy hitboxes after rebuilding segments.
+            hitbox.enabled = false;
         }
         foreach (PlatformEffector2D effector in GetComponentsInChildren<PlatformEffector2D>(true))
             effector.enabled = false;
         ApplyEnemyAppearance(Vector2.zero);
+        FitEnemyContactHitbox();
+    }
+
+    private void FitEnemyContactHitbox()
+    {
+        // Own this collider on the moving Rigidbody, independently of segment prefabs.
+        if (enemyContactHitbox == null)
+            enemyContactHitbox = gameObject.AddComponent<BoxCollider2D>();
+
+        Transform visualRoot = startingSegmentsParent != null ? startingSegmentsParent : transform;
+        bool found = false;
+        Bounds localBounds = new Bounds();
+        foreach (SpriteRenderer visual in visualRoot.GetComponentsInChildren<SpriteRenderer>())
+        {
+            if (!visual.enabled || visual.sprite == null) continue;
+            Bounds spriteBounds = visual.localBounds;
+            for (int corner = 0; corner < 4; corner++)
+            {
+                Vector3 point = spriteBounds.center + new Vector3(
+                    (corner % 2 == 0 ? -1f : 1f) * spriteBounds.extents.x,
+                    (corner < 2 ? -1f : 1f) * spriteBounds.extents.y, 0f);
+                point = transform.InverseTransformPoint(visual.transform.TransformPoint(point));
+                if (!found) { localBounds = new Bounds(point, Vector3.zero); found = true; }
+                else localBounds.Encapsulate(point);
+            }
+        }
+        enemyContactHitbox.offset = found ? (Vector2)localBounds.center : Vector2.zero;
+        enemyContactHitbox.size = found ? new Vector2(
+            Mathf.Max(0.05f, localBounds.size.x), Mathf.Max(0.05f, localBounds.size.y)) : Vector2.one;
+        enemyContactHitbox.usedByEffector = false;
+        enemyContactHitbox.isTrigger = true;
+        enemyContactHitbox.enabled = true;
     }
 
     private void ApplyEnemyAppearance(Vector2 direction)
